@@ -17,6 +17,7 @@
 <meta name="twitter:title" content="Nishant Panchal's Website"/>
 <meta name="twitter:image" content="http://www.undsgn.com/uncode/wp-content/uploads/2015/10/Creative-Agency-Uncode.jpg"/>
 <!-- / Yoast SEO plugin. -->
+<script src="js/modernizr.js"></script> <!-- Modernizr -->
 
 <link rel='stylesheet' id='dashicons-css'  href='css/dashicons.min.css' type='text/css' media='all' />
 <!-- <link rel='stylesheet' id='wp-jquery-ui-dialog-group-css' href='http://cdn.undsgn.com/uncode/wp-content/plugins/bwp-minify/min/?f=uncode/wp-includes/css/jquery-ui-dialog.min.css,uncode/wp-content/plugins/LayerSlider/static/css/layerslider.css,uncode/wp-content/plugins/contact-form-7/includes/css/styles.css,uncode/wp-content/plugins/revslider/public/assets/css/settings.css,uncode/wp-content/themes/uncode/library/css/style.css,uncode/wp-content/themes/uncode/library/css/style-custom.css,uncode/wp-content/themes/uncode-child/style.css,uncode/wp-content/uploads/uncode-fonts/uncodefont.css' type='text/css' media='all' /> -->
@@ -36,9 +37,15 @@
 <script type='text/javascript' src='js/ai-uncode.min.js' id='uncodeAI' data-breakpoints-images='258,516,720,1032,1440,2064,2880'></script>
 <script type='text/javascript' src='js/init.min.js'></script>
 <script type='text/javascript' src='js/jquery.js?ver=1.11.3'></script>
-<script src="js/modernizr.js"></script> <!-- Modernizr -->
 <script src="js/main.js"></script> <!-- Resource jQuery -->
-
+<script type="text/javascript">
+	function _calculateAge() { // birthday is a date
+			var birthday = new Date('December 21, 1992 7:00:00 am');
+	    var ageDifMs = Date.now() - birthday.getTime();
+	    var ageDate = new Date(ageDifMs); // miliseconds from epoch
+	   	return Math.abs(ageDate.getUTCFullYear() - 1970); 
+	}
+</script>
 <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="http://www.undsgn.com/uncode/wp-content/plugins/js_composer/assets/css/vc_lte_ie9.min.css" media="screen"><![endif]--><!--[if IE  8]><link rel="stylesheet" type="text/css" href="http://www.undsgn.com/uncode/wp-content/plugins/js_composer/assets/css/vc-ie8.min.css" media="screen"><![endif]-->
 <style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1442888782078{border-top-width: 1px !important;}</style><noscript><style type="text/css"> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript></head>
 <body class="page page-id-4898 page-child parent-pageid-43938 page-template-default  style-color-wayh-bg group-blog hmenu hmenu-position-right header-full-width main-center-align wpb-js-composer js-comp-ver-4.8.1 vc_responsive">
@@ -57,47 +64,50 @@
 									<div id="main-logo" class="navbar-header style-light">
 											<a href="#home" class="navbar-brand" data-minheight="16">
 												<div class="html-code" style="height: 16px">
-													<canvas class="logo-canvas" height="16" width="170"></canvas>
+													<canvas class="logo-canvas" height="16" width="150"></canvas>
 													<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 195 16" style="enable-background:new 0 0 195 16;" xml:space="preserve">
+	 viewBox="0 0 150 16" style="enable-background:new 0 0 150 16;" xml:space="preserve">
+														<style type="text/css">
+															.st0{fill:#010101;}
+														</style>
 														<g>
-															<path d="M24.3,1.6h2.5v13.6h-2.5l-5.6-9.4v9.4h-2.5V1.6h2.5l5.6,9.4V1.6z"/>
-															<path d="M32.3,1.7c0,0.5-0.1,0.9-0.4,1.2c-0.3,0.3-0.7,0.5-1.1,0.5c-0.4,0-0.8-0.2-1.1-0.5s-0.4-0.7-0.4-1.2s0.1-0.9,0.4-1.2
-																S30.3,0,30.8,0c0.4,0,0.8,0.2,1.1,0.5C32.1,0.8,32.3,1.2,32.3,1.7z M29.5,15.2V4.4H32v10.8H29.5z"/>
-															<path d="M34.1,7.6c0-0.9,0.4-1.7,1.1-2.4c0.7-0.6,1.7-1,2.9-1c1.2,0,2.2,0.3,2.9,0.9c0.7,0.6,1.1,1.5,1.2,2.6h-2.6
+															<path class="st0" d="M8.3,2.1h2.5v13.6H8.3L2.7,6.3v9.4H0.2V2.1h2.5l5.6,9.4V2.1z"/>
+															<path class="st0" d="M16.3,2.2c0,0.5-0.1,0.9-0.4,1.2c-0.3,0.3-0.7,0.5-1.1,0.5S14,3.7,13.7,3.4c-0.3-0.3-0.4-0.7-0.4-1.2
+																s0.1-0.9,0.4-1.2s0.6-0.5,1.1-0.5c0.4,0,0.8,0.2,1.1,0.5C16.1,1.3,16.3,1.7,16.3,2.2z M13.5,15.7V4.9H16v10.8
+																C16,15.7,13.5,15.7,13.5,15.7z"/>
+															<path class="st0" d="M18.1,8.1c0-0.9,0.4-1.7,1.1-2.4c0.7-0.6,1.7-1,2.9-1S24.3,5,25,5.6s1.1,1.5,1.2,2.6h-2.6
 																c-0.1-0.9-0.6-1.4-1.5-1.4c-0.5,0-0.8,0.1-1.1,0.3c-0.3,0.2-0.4,0.5-0.4,0.9c0,0.4,0.2,0.6,0.6,0.9c0.4,0.2,0.9,0.4,1.4,0.5
-																c0.6,0.1,1.1,0.3,1.7,0.4c0.6,0.2,1,0.5,1.4,0.9c0.4,0.4,0.6,1,0.6,1.8c0,1-0.4,1.8-1.1,2.4c-0.8,0.6-1.7,0.9-2.9,0.9
-																c-1.2,0-2.1-0.3-2.9-0.9s-1.2-1.5-1.2-2.6h2.6c0.1,0.9,0.6,1.4,1.6,1.4c0.5,0,0.8-0.1,1.1-0.3c0.3-0.2,0.4-0.5,0.4-0.9
-																c0-0.4-0.2-0.7-0.6-0.9c-0.4-0.2-0.9-0.4-1.4-0.5c-0.6-0.1-1.1-0.3-1.7-0.4c-0.6-0.2-1-0.5-1.4-0.9C34.3,8.8,34.1,8.3,34.1,7.6z"/>
-															<path d="M46.9,0.8V6c0.6-1.2,1.7-1.8,3.1-1.8c1.1,0,2.1,0.4,2.8,1.2c0.7,0.8,1.1,1.9,1.1,3.4v6.3h-2.5V9.2c0-0.8-0.2-1.5-0.6-1.9
-																c-0.4-0.4-0.9-0.7-1.6-0.7c-0.7,0-1.2,0.2-1.6,0.7c-0.4,0.4-0.6,1.1-0.6,1.9v5.9h-2.5V0.8H46.9z"/>
-															<path d="M57.1,13.8c-0.9-1-1.3-2.4-1.3-4c0-1.6,0.4-2.9,1.3-4c0.9-1,2-1.5,3.4-1.5s2.4,0.6,3.1,1.8V4.4H66v10.8h-2.5v-1.8
-																c-0.8,1.3-1.8,2-3.1,2C59.1,15.3,58,14.8,57.1,13.8z M62.7,12.1c0.5-0.6,0.8-1.3,0.8-2.3c0-1-0.3-1.8-0.8-2.3
-																c-0.5-0.6-1.1-0.8-1.8-0.8c-0.7,0-1.3,0.3-1.8,0.8c-0.5,0.6-0.8,1.3-0.8,2.3c0,1,0.3,1.8,0.8,2.3c0.5,0.6,1.1,0.9,1.8,0.9
-																C61.6,13,62.2,12.7,62.7,12.1z"/>
-															<path d="M71.2,4.4V6c0.6-1.2,1.7-1.8,3.1-1.8c1.1,0,2.1,0.4,2.8,1.2c0.7,0.8,1.1,1.9,1.1,3.4v6.3h-2.5V9.2c0-0.8-0.2-1.5-0.6-1.9
-																c-0.4-0.4-0.9-0.7-1.6-0.7c-0.7,0-1.2,0.2-1.6,0.7c-0.4,0.4-0.6,1.1-0.6,1.9v5.9h-2.5V4.4H71.2z"/>
-															<path d="M84.6,12.9h1.2v2.3h-1.6c-1,0-1.8-0.3-2.3-0.8c-0.5-0.5-0.8-1.3-0.8-2.5V6.6H80V4.4H81V1.8h2.5v2.7h2.2v2.2h-2.2v5.3
-																c0,0.3,0.1,0.6,0.2,0.7C83.9,12.8,84.2,12.9,84.6,12.9z"/>
-															<path d="M101.2,8.4c-0.3,0.4-0.8,0.8-1.4,1c-0.6,0.3-1.3,0.4-2.2,0.4h-2.1v5.4h-2.5V1.6h4.6c1.4,0,2.6,0.4,3.3,1.2
-																c0.8,0.8,1.2,1.7,1.2,2.8C102.2,6.6,101.9,7.6,101.2,8.4z M95.6,7.7h2.1c0.6,0,1.1-0.2,1.4-0.5c0.3-0.4,0.5-0.8,0.5-1.4
-																c0-0.6-0.2-1.1-0.5-1.4c-0.3-0.4-0.8-0.5-1.4-0.5h-2.1V7.7z"/>
-															<path d="M104.7,13.8c-0.9-1-1.3-2.4-1.3-4c0-1.6,0.4-2.9,1.3-4c0.9-1,2-1.5,3.4-1.5c1.4,0,2.4,0.6,3.1,1.8V4.4h2.5v10.8h-2.5v-1.8
-																c-0.8,1.3-1.8,2-3.1,2C106.7,15.3,105.6,14.8,104.7,13.8z M110.4,12.1c0.5-0.6,0.8-1.3,0.8-2.3c0-1-0.3-1.8-0.8-2.3
-																c-0.5-0.6-1.1-0.8-1.8-0.8s-1.3,0.3-1.8,0.8c-0.5,0.6-0.8,1.3-0.8,2.3c0,1,0.3,1.8,0.8,2.3c0.5,0.6,1.1,0.9,1.8,0.9
-																S109.9,12.7,110.4,12.1z"/>
-															<path d="M118.9,4.4V6c0.6-1.2,1.7-1.8,3.1-1.8c1.1,0,2.1,0.4,2.8,1.2c0.7,0.8,1.1,1.9,1.1,3.4v6.3h-2.5V9.2c0-0.8-0.2-1.5-0.6-1.9
-																c-0.4-0.4-0.9-0.7-1.6-0.7c-0.7,0-1.2,0.2-1.6,0.7c-0.4,0.4-0.6,1.1-0.6,1.9v5.9h-2.5V4.4H118.9z"/>
-															<path d="M129,13.8c-0.9-1-1.4-2.4-1.4-4s0.5-3,1.4-4c0.9-1,2.1-1.5,3.5-1.5c1.2,0,2.2,0.3,3,1c0.8,0.6,1.4,1.5,1.6,2.7h-2.7
-																c-0.3-0.9-1-1.3-1.9-1.3c-0.7,0-1.3,0.3-1.7,0.9c-0.4,0.6-0.6,1.4-0.6,2.4s0.2,1.8,0.6,2.4c0.4,0.6,1,0.9,1.7,0.9
-																c1,0,1.6-0.5,1.9-1.4h2.7c-0.3,1.1-0.8,2-1.7,2.7c-0.8,0.7-1.8,1-3,1C131.1,15.3,129.9,14.8,129,13.8z"/>
-															<path d="M141.6,0.8V6c0.6-1.2,1.7-1.8,3.1-1.8c1.1,0,2.1,0.4,2.8,1.2c0.7,0.8,1.1,1.9,1.1,3.4v6.3H146V9.2c0-0.8-0.2-1.5-0.6-1.9
-																c-0.4-0.4-0.9-0.7-1.6-0.7s-1.2,0.2-1.6,0.7c-0.4,0.4-0.6,1.1-0.6,1.9v5.9h-2.5V0.8H141.6z"/>
-															<path d="M151.7,13.8c-0.9-1-1.3-2.4-1.3-4c0-1.6,0.4-2.9,1.3-4c0.9-1,2-1.5,3.4-1.5c1.4,0,2.4,0.6,3.1,1.8V4.4h2.5v10.8h-2.5v-1.8
-																c-0.8,1.3-1.8,2-3.1,2C153.7,15.3,152.6,14.8,151.7,13.8z M157.4,12.1c0.5-0.6,0.8-1.3,0.8-2.3c0-1-0.3-1.8-0.8-2.3
-																c-0.5-0.6-1.1-0.8-1.8-0.8s-1.3,0.3-1.8,0.8C153.2,8,153,8.8,153,9.8c0,1,0.3,1.8,0.8,2.3c0.5,0.6,1.1,0.9,1.8,0.9
-																C156.3,13,156.9,12.7,157.4,12.1z"/>
-															<path d="M163.4,15.2V0.8h2.5v14.4H163.4z"/>											
+																c0.6,0.1,1.1,0.3,1.7,0.4c0.6,0.2,1,0.5,1.4,0.9s0.6,1,0.6,1.8c0,1-0.4,1.8-1.1,2.4c-0.8,0.6-1.7,0.9-2.9,0.9s-2.1-0.3-2.9-0.9
+																s-1.2-1.5-1.2-2.6h2.6c0.1,0.9,0.6,1.4,1.6,1.4c0.5,0,0.8-0.1,1.1-0.3s0.4-0.5,0.4-0.9s-0.2-0.7-0.6-0.9c-0.4-0.2-0.9-0.4-1.4-0.5
+																c-0.6-0.1-1.1-0.3-1.7-0.4c-0.6-0.2-1-0.5-1.4-0.9C18.3,9.3,18.1,8.8,18.1,8.1z"/>
+															<path class="st0" d="M30.9,1.3v5.2c0.6-1.2,1.7-1.8,3.1-1.8c1.1,0,2.1,0.4,2.8,1.2s1.1,1.9,1.1,3.4v6.3h-2.5V9.7
+																c0-0.8-0.2-1.5-0.6-1.9c-0.4-0.4-0.9-0.7-1.6-0.7c-0.7,0-1.2,0.2-1.6,0.7C31.2,8.2,31,8.9,31,9.7v5.9h-2.5V1.3H30.9z"/>
+															<path class="st0" d="M41.1,14.3c-0.9-1-1.3-2.4-1.3-4s0.4-2.9,1.3-4c0.9-1,2-1.5,3.4-1.5s2.4,0.6,3.1,1.8V4.9H50v10.8h-2.5v-1.8
+																c-0.8,1.3-1.8,2-3.1,2C43.1,15.8,42,15.3,41.1,14.3z M46.7,12.6c0.5-0.6,0.8-1.3,0.8-2.3S47.2,8.5,46.7,8c-0.5-0.6-1.1-0.8-1.8-0.8
+																S43.6,7.5,43.1,8c-0.5,0.6-0.8,1.3-0.8,2.3s0.3,1.8,0.8,2.3c0.5,0.6,1.1,0.9,1.8,0.9C45.6,13.5,46.2,13.2,46.7,12.6z"/>
+															<path class="st0" d="M55.2,4.9v1.6c0.6-1.2,1.7-1.8,3.1-1.8c1.1,0,2.1,0.4,2.8,1.2c0.7,0.8,1.1,1.9,1.1,3.4v6.3h-2.5V9.7
+																c0-0.8-0.2-1.5-0.6-1.9c-0.4-0.4-0.9-0.7-1.6-0.7s-1.2,0.2-1.6,0.7c-0.4,0.4-0.6,1.1-0.6,1.9v5.9h-2.5V4.9H55.2z"/>
+															<path class="st0" d="M68.6,13.4h1.2v2.3h-1.6c-1,0-1.8-0.3-2.3-0.8S65,13.6,65,12.4V7.1H64V4.9h1V2.3h2.5V5h2.2v2.2h-2.2v5.3
+																c0,0.3,0.1,0.6,0.2,0.7C67.9,13.3,68.2,13.4,68.6,13.4z"/>
+															<path class="st0" d="M85.2,8.9c-0.3,0.4-0.8,0.8-1.4,1c-0.6,0.3-1.3,0.4-2.2,0.4h-2.1v5.4H77V2.1h4.6c1.4,0,2.6,0.4,3.3,1.2
+																c0.8,0.8,1.2,1.7,1.2,2.8C86.2,7.1,85.9,8.1,85.2,8.9z M79.6,8.2h2.1c0.6,0,1.1-0.2,1.4-0.5c0.3-0.4,0.5-0.8,0.5-1.4
+																s-0.2-1.1-0.5-1.4c-0.3-0.4-0.8-0.5-1.4-0.5h-2.1V8.2z"/>
+															<path class="st0" d="M88.7,14.3c-0.9-1-1.3-2.4-1.3-4s0.4-2.9,1.3-4c0.9-1,2-1.5,3.4-1.5s2.4,0.6,3.1,1.8V4.9h2.5v10.8h-2.5v-1.8
+																c-0.8,1.3-1.8,2-3.1,2C90.7,15.8,89.6,15.3,88.7,14.3z M94.4,12.6c0.5-0.6,0.8-1.3,0.8-2.3S94.9,8.5,94.4,8
+																c-0.5-0.6-1.1-0.8-1.8-0.8S91.2,7.5,90.8,8c-0.5,0.6-0.8,1.3-0.8,2.3s0.3,1.8,0.8,2.3c0.5,0.6,1.1,0.9,1.8,0.9S93.9,13.2,94.4,12.6
+																z"/>
+															<path class="st0" d="M102.9,4.9v1.6c0.6-1.2,1.7-1.8,3.1-1.8c1.1,0,2.1,0.4,2.8,1.2c0.7,0.8,1.1,1.9,1.1,3.4v6.3h-2.5V9.7
+																c0-0.8-0.2-1.5-0.6-1.9c-0.4-0.4-0.9-0.7-1.6-0.7s-1.2,0.2-1.6,0.7c-0.4,0.4-0.6,1.1-0.6,1.9v5.9h-2.5V4.9H102.9z"/>
+															<path class="st0" d="M113,14.3c-0.9-1-1.4-2.4-1.4-4s0.5-3,1.4-4s2.1-1.5,3.5-1.5c1.2,0,2.2,0.3,3,1c0.8,0.6,1.4,1.5,1.6,2.7h-2.7
+																c-0.3-0.9-1-1.3-1.9-1.3c-0.7,0-1.3,0.3-1.7,0.9s-0.6,1.4-0.6,2.4s0.2,1.8,0.6,2.4c0.4,0.6,1,0.9,1.7,0.9c1,0,1.6-0.5,1.9-1.4h2.7
+																c-0.3,1.1-0.8,2-1.7,2.7c-0.8,0.7-1.8,1-3,1C115.1,15.8,113.8,15.3,113,14.3z"/>
+															<path class="st0" d="M125.6,1.3v5.2c0.6-1.2,1.7-1.8,3.1-1.8c1.1,0,2.1,0.4,2.8,1.2s1.1,1.9,1.1,3.4v6.3h-2.6V9.7
+																c0-0.8-0.2-1.5-0.6-1.9c-0.4-0.4-0.9-0.7-1.6-0.7c-0.7,0-1.2,0.2-1.6,0.7c-0.4,0.4-0.6,1.1-0.6,1.9v5.9H123V1.3H125.6z"/>
+															<path class="st0" d="M135.6,14.3c-0.9-1-1.3-2.4-1.3-4s0.4-2.9,1.3-4c0.9-1,2-1.5,3.4-1.5s2.4,0.6,3.1,1.8V4.9h2.5v10.8h-2.5v-1.8
+																c-0.8,1.3-1.8,2-3.1,2C137.6,15.8,136.6,15.3,135.6,14.3z M141.3,12.6c0.5-0.6,0.8-1.3,0.8-2.3s-0.3-1.8-0.8-2.3
+																c-0.5-0.6-1.1-0.8-1.8-0.8s-1.3,0.3-1.8,0.8c-0.6,0.5-0.8,1.3-0.8,2.3s0.3,1.8,0.8,2.3c0.5,0.6,1.1,0.9,1.8,0.9
+																S140.8,13.2,141.3,12.6z"/>
+															<path class="st0" d="M147.3,15.7V1.3h2.5v14.4H147.3z"/>											
 														</g>
 													</svg>
 												</div>
@@ -161,6 +171,7 @@
 																											<b class="is-visible">Nishant</b>
 																											<b>a designer</b>
 																											<b>a developer</b>
+																											<b>Nishant</b>
 																											<b>a thinker</b>
 																											<b>a dreamer</b>
 																										</span>
@@ -220,7 +231,7 @@
 																										</div>
 																										<div class="clear"></div>
 																										<div class="uncode_text_column text-lead">
-																											<p>Hi! I am Nishant, a 23 year old developer and design enthusiast. I am dedicated to designing better user experiences by understanding the product from user's perspective. I love to see the world from other's eyes. Apart from this I like playing all kind of sports. Staying healthy is the motto. Movie fanatic, especially those falling in Mystery, Comedy and Animation genres.</p>
+																											<p>Hi! I am Nishant, a <script>document.write(_calculateAge());</script> year old developer and design enthusiast. I am dedicated to designing better user experiences by understanding the product from user's perspective. I love to see the world from other's eyes. Apart from this I like playing all kind of sports. Staying healthy is the motto. Movie fanatic, especially those falling in Mystery, Comedy and Animation genres.</p>
 																										</div>
 																									</div>
 																								</div>
@@ -515,7 +526,7 @@
   																											<div class="uncell no-block-padding">
   																												<div class="uncont">
   																													<div class="uncode-wrapper uncode-counter  zoom-in animate_when_almost_visible">
-  																														<p class="font-762333 h1 font-weight-700"><span class="counter">525</span></p><div class="counter-text"><p>LAYOUTS</p></div>
+  																														<p class="font-762333 h1 font-weight-700"><span class="counter">125</span>k+</p><div class="counter-text"><p>LINES OF CODE</p></div>
   																													</div>
   																												</div>
   																											</div>
@@ -527,8 +538,8 @@
   																										<div class="uncoltable">
   																											<div class="uncell no-block-padding">
   																												<div class="uncont">
-  																													<div class="uncode-wrapper uncode-counter  zoom-in animate_when_almost_visible" data-delay="200"><p class="font-762333 h1 font-weight-700"><span class="counter">23</span></p>
-  																														<div class="counter-text"><p>AWARDS</p></div>
+  																													<div class="uncode-wrapper uncode-counter  zoom-in animate_when_almost_visible" data-delay="200"><p class="font-762333 h1 font-weight-700"><span class="counter">78</span>H</p>
+  																														<div class="counter-text"><p>WORK-STREAK</p></div>
   																													</div>
   																												</div>
   																											</div>
@@ -540,7 +551,7 @@
 																											<div class="uncoltable">
 																												<div class="uncell no-block-padding">
 																													<div class="uncont">
-																														<div class="uncode-wrapper uncode-counter  zoom-in animate_when_almost_visible" data-delay="400"><p class="font-762333 h1 font-weight-700"><span class="counter">745</span></p>
+																														<div class="uncode-wrapper uncode-counter  zoom-in animate_when_almost_visible" data-delay="400"><p class="font-762333 h1 font-weight-700"><span class="counter">745</span>+</p>
 																															<div class="counter-text"><p>CUPS OF COFFEE</p></div>
 																														</div>
 																													</div>
@@ -553,8 +564,8 @@
 																											<div class="uncoltable">
 																												<div class="uncell no-block-padding">
 																													<div class="uncont">
-																														<div class="uncode-wrapper uncode-counter  zoom-in animate_when_almost_visible" data-delay="600"><p class="font-762333 h1 font-weight-700"><span class="counter">78</span></p>
-																															<div class="counter-text"><p>PROJECTS</p></div>
+																														<div class="uncode-wrapper uncode-counter  zoom-in animate_when_almost_visible" data-delay="600"><p class="font-762333 h1 font-weight-700"><span class="counter">21</span></p>
+																															<div class="counter-text"><p>TYPE OF SPORTS</p></div>
 																														</div>
 																													</div>
 																												</div>
