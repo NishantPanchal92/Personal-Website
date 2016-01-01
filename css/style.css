@@ -10089,6 +10089,7 @@ footer {
 }
 footer .footer-last {
   font-size: 13px;
+  font-family: Hind;
 }
 footer .footer-last p {
   font-size: 13px;
@@ -10658,6 +10659,9 @@ div[class*=sharer-].share-button.only-icon {
 }
 .social-pinterest:before {
   content: "\f0d2" !important;
+}
+.social-linkedin:before {
+  content: "\f0e1" !important;
 }
 .social-paper-plane:before {
   content: "\f1d8" !important;
