@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html class="no-touch" lang="en-US" prefix="og: http://ogp.me/ns#" xmlns="http://www.w3.org/1999/xhtml" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>CSS vs JS Animation - Nishant's Blog</title>
+      <link rel="canonical" href="index.html" />
+      <meta property="og:locale" content="en_US" />
+      <meta property="og:type" content="article" />
+      <meta property="og:title" content="CSS vs JS Animation - Nishant's Blog" />
+      <meta property="og:description" content="Many years ago, I worked for my parents who own a video production company. Because it is a family business, you inevitably end up wearing many hats and being the czar of many different jobs. I mainly managed projects and worked as a video editor. On production, there were times that I was called on to work as an audio tech and was made to wear headphones on long production days. In those days, having a really good set of headphones that picked up every nuance of sound was essential to making sure the client got what they needed." />
+      <meta property="og:url" content="http://www.undsgn.com/uncode/calm-over-the-horizon/" />
+      <meta property="og:site_name" content="Nishant's Website" />
+      <meta property="article:tag" content="Web" />
+      <meta property="article:tag" content="Animation" />
+      <meta property="article:section" content="Web Animation" />
+      <meta property="og:image" content="http://www.undsgn.com/uncode/wp-content/uploads/2015/01/photo-1434037999046-f638fcc58d82.jpg" />
+      <meta name="twitter:card" content="Nishant's Blog"/>
+      <meta name="twitter:description" content="Many years ago, I worked for my parents who own a video production company. Because it is a family business, you inevitably end up wearing many hats and being the czar of many different jobs. I mainly managed projects and worked as a video editor. On production, there were times that I was called on to work as an audio tech and was made to wear headphones on long production days. In those days, having a really good set of headphones that picked up every nuance of sound was essential to making sure the client got what they needed."/>
+      <meta name="twitter:title" content="CSS vs JS Animation - Nishant's Blog"/>
+      <meta name="twitter:image" content="http://www.undsgn.com/uncode/wp-content/uploads/2015/01/photo-1434037999046-f638fcc58d82.jpg"/>
+      
+			<link rel='stylesheet' id='dashicons-css'  href='../css/dashicons.min.css' type='text/css' media='all' />
+      <link rel='stylesheet' id='wp-jquery-ui-dialog-css'  href='../css/combined.css' type='text/css' media='all' />
+      <link rel='stylesheet' id='ls-google-fonts-css'  href='http://fonts.googleapis.com/css?family=Lato:100,300,regular,700,900%7COpen+Sans:300%7CIndie+Flower:regular%7COswald:300,regular,700&amp;subset=latin%2Clatin-ext' type='text/css' media='all' />
+      <style id='rs-plugin-settings-inline-css' type='text/css'>
+         .tp-caption a{color:#ff7302;text-shadow:none;-webkit-transition:all 0.2s ease-out;-moz-transition:all 0.2s ease-out;-o-transition:all 0.2s ease-out;-ms-transition:all 0.2s ease-out}.tp-caption a:hover{color:#ffa902}
+      </style>
+      <style id='uncode-style-inline-css' type='text/css'>
+         @media (min-width: 960px) { .limit-width { max-width: 1200px; margin: auto;}}
+         .menu-primary ul.menu-smart > li > a, .menu-primary ul.menu-smart li.dropdown > a, .menu-primary ul.menu-smart li.mega-menu > a, .vmenu-container ul.menu-smart > li > a, .vmenu-container ul.menu-smart li.dropdown > a { text-transform: uppercase; }
+      </style>
+      <link rel='stylesheet' id='uncodefont-google-css'  href='http://fonts.googleapis.com/css?family=Poppins%3A300%2Cregular%2C500%2C600%2C700%7CHind%3A300%2Cregular%2C500%2C600%2C700%7CDroid+Serif%3Aregular%2Citalic%2C700%2C700italic%7CDosis%3A200%2C300%2Cregular%2C500%2C600%2C700%2C800%7CPlayfair+Display%3Aregular%2Citalic%2C700%2C700italic%2C900%2C900italic%7COswald%3A300%2Cregular%2C700&amp;subset=devanagari%2Clatin-ext%2Clatin%2Ccyrillic&amp;ver=1.0.0' type='text/css' media='all' />
+      <link rel='stylesheet' id='uncode-woocommerce-css'  href='../css/woocommerce.css' type='text/css' media='all' />
+
+      <script type='text/javascript' src='../js/jquery.js?ver=1.11.3'></script>
+      <script type='text/javascript' src='../js/jquery-migrate.min.js'></script>
+      <script type='text/javascript' src='../js/greensock.js'></script>
+      <script type='text/javascript' src='../js/layerslider.kreaturamedia.jquery.js'></script>
+      <script type='text/javascript' src='../js/layerslider.transitions.js'></script>
+      <script type='text/javascript' src='../js/jquery.themepunch.tools.min.js'></script>
+      <script type='text/javascript' src='../js/jquery.themepunch.revolution.min.js'></script>
+      <script type='text/javascript' src='../js/ai-uncode.min.js' id='uncodeAI' data-breakpoints-images='258,516,720,1032,1440,2064,2880'></script>
+      <script type='text/javascript' src='../js/init.min.js'></script>
+
+      <style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+      <noscript>
+         <style type="text/css"> .wpb_animate_when_almost_visible { opacity: 1; }</style>
+      </noscript>
+   </head>
+   <body class="single single-post postid-20528 single-format-standard  style-color-wayh-bg group-blog smooth-scroller hmenu hmenu-position-right header-full-width main-center-align wpb-js-composer js-comp-ver-4.9.1 vc_responsive">
+      <div class="box-wrapper">
+         <div class="box-container">
+            <script type="text/javascript">UNCODE.initBox();</script>
+            <!-- Menu Bar -->
+			<div class="menu-wrapper menu-shrink menu-sticky menu-no-arrows">
+				<header id="masthead" class="navbar menu-primary menu-light submenu-dark menu-transparent menu-add-padding style-light-original menu-absolute menu-with-logo">
+					<div class="menu-container style-color-xsdn-bg menu-borders">
+						<div class="row-menu">
+							<div class="row-menu-inner">
+								<div class="col-lg-0 logo-container megamenu-diff middle">
+									<div id="main-logo" class="navbar-header style-light">
+											<a href="#home" class="navbar-brand" data-minheight="16">
+												<div class="html-code" style="height: 16px">
+													<canvas class="logo-canvas" height="16" width="150"></canvas>
+													<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 150 16" style="enable-background:new 0 0 150 16;" xml:space="preserve">
+														<style type="text/css">
+															.st0{fill:#010101;}
+														</style>
+														<g>
+															<path class="st0" d="M8.3,2.1h2.5v13.6H8.3L2.7,6.3v9.4H0.2V2.1h2.5l5.6,9.4V2.1z"/>
+															<path class="st0" d="M16.3,2.2c0,0.5-0.1,0.9-0.4,1.2c-0.3,0.3-0.7,0.5-1.1,0.5S14,3.7,13.7,3.4c-0.3-0.3-0.4-0.7-0.4-1.2
+																s0.1-0.9,0.4-1.2s0.6-0.5,1.1-0.5c0.4,0,0.8,0.2,1.1,0.5C16.1,1.3,16.3,1.7,16.3,2.2z M13.5,15.7V4.9H16v10.8
+																C16,15.7,13.5,15.7,13.5,15.7z"/>
+															<path class="st0" d="M18.1,8.1c0-0.9,0.4-1.7,1.1-2.4c0.7-0.6,1.7-1,2.9-1S24.3,5,25,5.6s1.1,1.5,1.2,2.6h-2.6
+																c-0.1-0.9-0.6-1.4-1.5-1.4c-0.5,0-0.8,0.1-1.1,0.3c-0.3,0.2-0.4,0.5-0.4,0.9c0,0.4,0.2,0.6,0.6,0.9c0.4,0.2,0.9,0.4,1.4,0.5
+																c0.6,0.1,1.1,0.3,1.7,0.4c0.6,0.2,1,0.5,1.4,0.9s0.6,1,0.6,1.8c0,1-0.4,1.8-1.1,2.4c-0.8,0.6-1.7,0.9-2.9,0.9s-2.1-0.3-2.9-0.9
+																s-1.2-1.5-1.2-2.6h2.6c0.1,0.9,0.6,1.4,1.6,1.4c0.5,0,0.8-0.1,1.1-0.3s0.4-0.5,0.4-0.9s-0.2-0.7-0.6-0.9c-0.4-0.2-0.9-0.4-1.4-0.5
+																c-0.6-0.1-1.1-0.3-1.7-0.4c-0.6-0.2-1-0.5-1.4-0.9C18.3,9.3,18.1,8.8,18.1,8.1z"/>
+															<path class="st0" d="M30.9,1.3v5.2c0.6-1.2,1.7-1.8,3.1-1.8c1.1,0,2.1,0.4,2.8,1.2s1.1,1.9,1.1,3.4v6.3h-2.5V9.7
+																c0-0.8-0.2-1.5-0.6-1.9c-0.4-0.4-0.9-0.7-1.6-0.7c-0.7,0-1.2,0.2-1.6,0.7C31.2,8.2,31,8.9,31,9.7v5.9h-2.5V1.3H30.9z"/>
+															<path class="st0" d="M41.1,14.3c-0.9-1-1.3-2.4-1.3-4s0.4-2.9,1.3-4c0.9-1,2-1.5,3.4-1.5s2.4,0.6,3.1,1.8V4.9H50v10.8h-2.5v-1.8
+																c-0.8,1.3-1.8,2-3.1,2C43.1,15.8,42,15.3,41.1,14.3z M46.7,12.6c0.5-0.6,0.8-1.3,0.8-2.3S47.2,8.5,46.7,8c-0.5-0.6-1.1-0.8-1.8-0.8
+																S43.6,7.5,43.1,8c-0.5,0.6-0.8,1.3-0.8,2.3s0.3,1.8,0.8,2.3c0.5,0.6,1.1,0.9,1.8,0.9C45.6,13.5,46.2,13.2,46.7,12.6z"/>
+															<path class="st0" d="M55.2,4.9v1.6c0.6-1.2,1.7-1.8,3.1-1.8c1.1,0,2.1,0.4,2.8,1.2c0.7,0.8,1.1,1.9,1.1,3.4v6.3h-2.5V9.7
+																c0-0.8-0.2-1.5-0.6-1.9c-0.4-0.4-0.9-0.7-1.6-0.7s-1.2,0.2-1.6,0.7c-0.4,0.4-0.6,1.1-0.6,1.9v5.9h-2.5V4.9H55.2z"/>
+															<path class="st0" d="M68.6,13.4h1.2v2.3h-1.6c-1,0-1.8-0.3-2.3-0.8S65,13.6,65,12.4V7.1H64V4.9h1V2.3h2.5V5h2.2v2.2h-2.2v5.3
+																c0,0.3,0.1,0.6,0.2,0.7C67.9,13.3,68.2,13.4,68.6,13.4z"/>
+															<path class="st0" d="M85.2,8.9c-0.3,0.4-0.8,0.8-1.4,1c-0.6,0.3-1.3,0.4-2.2,0.4h-2.1v5.4H77V2.1h4.6c1.4,0,2.6,0.4,3.3,1.2
+																c0.8,0.8,1.2,1.7,1.2,2.8C86.2,7.1,85.9,8.1,85.2,8.9z M79.6,8.2h2.1c0.6,0,1.1-0.2,1.4-0.5c0.3-0.4,0.5-0.8,0.5-1.4
+																s-0.2-1.1-0.5-1.4c-0.3-0.4-0.8-0.5-1.4-0.5h-2.1V8.2z"/>
+															<path class="st0" d="M88.7,14.3c-0.9-1-1.3-2.4-1.3-4s0.4-2.9,1.3-4c0.9-1,2-1.5,3.4-1.5s2.4,0.6,3.1,1.8V4.9h2.5v10.8h-2.5v-1.8
+																c-0.8,1.3-1.8,2-3.1,2C90.7,15.8,89.6,15.3,88.7,14.3z M94.4,12.6c0.5-0.6,0.8-1.3,0.8-2.3S94.9,8.5,94.4,8
+																c-0.5-0.6-1.1-0.8-1.8-0.8S91.2,7.5,90.8,8c-0.5,0.6-0.8,1.3-0.8,2.3s0.3,1.8,0.8,2.3c0.5,0.6,1.1,0.9,1.8,0.9S93.9,13.2,94.4,12.6
+																z"/>
+															<path class="st0" d="M102.9,4.9v1.6c0.6-1.2,1.7-1.8,3.1-1.8c1.1,0,2.1,0.4,2.8,1.2c0.7,0.8,1.1,1.9,1.1,3.4v6.3h-2.5V9.7
+																c0-0.8-0.2-1.5-0.6-1.9c-0.4-0.4-0.9-0.7-1.6-0.7s-1.2,0.2-1.6,0.7c-0.4,0.4-0.6,1.1-0.6,1.9v5.9h-2.5V4.9H102.9z"/>
+															<path class="st0" d="M113,14.3c-0.9-1-1.4-2.4-1.4-4s0.5-3,1.4-4s2.1-1.5,3.5-1.5c1.2,0,2.2,0.3,3,1c0.8,0.6,1.4,1.5,1.6,2.7h-2.7
+																c-0.3-0.9-1-1.3-1.9-1.3c-0.7,0-1.3,0.3-1.7,0.9s-0.6,1.4-0.6,2.4s0.2,1.8,0.6,2.4c0.4,0.6,1,0.9,1.7,0.9c1,0,1.6-0.5,1.9-1.4h2.7
+																c-0.3,1.1-0.8,2-1.7,2.7c-0.8,0.7-1.8,1-3,1C115.1,15.8,113.8,15.3,113,14.3z"/>
+															<path class="st0" d="M125.6,1.3v5.2c0.6-1.2,1.7-1.8,3.1-1.8c1.1,0,2.1,0.4,2.8,1.2s1.1,1.9,1.1,3.4v6.3h-2.6V9.7
+																c0-0.8-0.2-1.5-0.6-1.9c-0.4-0.4-0.9-0.7-1.6-0.7c-0.7,0-1.2,0.2-1.6,0.7c-0.4,0.4-0.6,1.1-0.6,1.9v5.9H123V1.3H125.6z"/>
+															<path class="st0" d="M135.6,14.3c-0.9-1-1.3-2.4-1.3-4s0.4-2.9,1.3-4c0.9-1,2-1.5,3.4-1.5s2.4,0.6,3.1,1.8V4.9h2.5v10.8h-2.5v-1.8
+																c-0.8,1.3-1.8,2-3.1,2C137.6,15.8,136.6,15.3,135.6,14.3z M141.3,12.6c0.5-0.6,0.8-1.3,0.8-2.3s-0.3-1.8-0.8-2.3
+																c-0.5-0.6-1.1-0.8-1.8-0.8s-1.3,0.3-1.8,0.8c-0.6,0.5-0.8,1.3-0.8,2.3s0.3,1.8,0.8,2.3c0.5,0.6,1.1,0.9,1.8,0.9
+																S140.8,13.2,141.3,12.6z"/>
+															<path class="st0" d="M147.3,15.7V1.3h2.5v14.4H147.3z"/>											
+														</g>
+													</svg>
+												</div>
+											</a>
+										</div>
+									<div class="mmb-container"><div class="mobile-menu-button mobile-menu-button-light lines-button x2"><span class="lines"></span></div></div>
+								</div>
+								<div class="col-lg-12 main-menu-container middle">
+									<div class="menu-horizontal">
+										<div class="menu-horizontal-inner">
+											<div class="nav navbar-nav navbar-main navbar-nav-first">
+												<ul id="menu-main-menu" class="menu-primary-inner menu-smart sm">
+													<li id="menu-item-42967" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-object-custom menu-item-42967"><a title="Home" href="#home">Home<i class="fa fa-dropdown"></i></a></li>
+													<li id="menu-item-42968" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-object-custom menu-item-42968"><a title="Amout Me" href="#about">About Me<i class="fa fa-dropdown"></i></a></li>
+													<li id="menu-item-42969" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-object-custom menu-item-42969"><a title="Projects" href="#works">Project<i class="fa fa-dropdown"></i></a></li>
+													<li id="menu-item-43666" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-object-custom menu-item-43666"><a title="Blog" href="#blog">Blog<i class="fa fa-dropdown"></i></a></li>
+													<li id="menu-item-42970" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-object-custom menu-item-42970"><a title="Contact Me" href="#contact">Contact Me<i class="fa fa-dropdown"></i></a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</header>
+				</div>
+        <script type="text/javascript">UNCODE.fixMenuHeight();</script>
+
+            <div class="main-wrapper">
+               <div class="main-container">
+                  <div class="page-wrapper">
+                     <div class="sections-container">
+                        <div id="page-header">
+                           <div class="header-basic style-dark">
+                              <div class="background-element header-wrapper header-scroll-opacity header-parallax style-color-wayh-bg header-only-text" data-height="75" style="min-height: 300px;">
+                                 <div class="header-bg-wrapper">
+                                    <div class="header-bg" style="background-image: url(http://www.undsgn.com/uncode/wp-content/uploads/2015/01/photo-1434037999046-f638fcc58d82-uai-1440x882.jpg);"></div>
+                                    <div class="block-bg-overlay style-color-wayh-bg" style="opacity: 0.65;"></div>
+                                 </div>
+                                 <div class="header-main-container limit-width">
+                                    <div class="header-content header-center header-middle header-align-center">
+                                       <div class="header-content-inner" >
+                                          <h1 class="header-title font-762333 fontsize-338686 font-weight-700 text-uppercase"><span>CSS vs JS Animation</span></h1>
+                                          <div class="post-info">June 4, 2015<span>|</span>In <a href="http://www.undsgn.com/uncode/category/lifestyle/" title="View all posts in Lifestyle">Lifestyle</a>, <a href="http://www.undsgn.com/uncode/category/business/" title="View all posts in Business">Business</a><span>|</span>By <a href="http://www.undsgn.com/uncode/author/jennifer-freeman/">Jennifer Freeman</a></div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="header-scrolldown style-dark"><i class="fa fa-angle-down"></i></div>
+                              </div>
+                           </div>
+                        </div>
+                        <script type="text/javascript">UNCODE.initHeader();</script>
+                        <article id="post-20528" class="page-body style-color-xsdn-bg post-20528 post type-post status-publish format-standard has-post-thumbnail hentry category-lifestyle category-business tag-music tag-style">
+                           <div class="post-wrapper">
+                              <div class="post-body">
+                                 <div class="post-content" style="max-width: 800px; margin: auto;">
+                                    <div class="row-container">
+                                       <div class="row row-parent style-light double-top-padding double-bottom-padding">
+                                          <p>Many years ago, I worked for my parents who own a video production company. Because it is a family business, you inevitably end up wearing many hats and being the czar of many different jobs. I mainly managed projects and worked as a video editor. On production, there were times that I was called on to work as an audio tech and was made to wear headphones on long production days. In those days, having a really good set of headphones that picked up every nuance of sound was essential to making sure the client got what they needed.</p>
+                                          <h4>First impressions.</h4>
+                                          <p>Naturally, my first impression of these headphones is based off of the look of them. They have a classic over-the-ear style that is highlighted by <strong>a blue LED light</strong> that indicates the power for the noise canceling. The padding on the ear pieces seems adequate for extended usage periods.</p>
+                                          <p>They are wired headphones, but the 3.5mm stereo mini-plug cable is detachable. Something else I noticed right of the bat was the very nice carrying case that comes with them. It has a hard plastic exterior with a soft cloth interior that helps to protect the surface of the headphones from scratches. I never truly appreciated cases for headphones until I started carrying them from place-to-place. Now I can’t imagine not having a case.</p>
+                                          <h4>A perfect fit.</h4>
+                                          <p>Once I gave the headphones a thorough once-over exam, I tried them on. As I mentioned, they have a classic <em>over-the-ear style</em> and just looking at them, the padding on the ear pieces seem adequate and the peak of the headband seemed to be a bit lacking, but you don’t really know comfort unless you try on the product. So, I slipped the headphones on and found them to be exquisitely comfortable.</p>
+                                          <h4>Quality.</h4>
+                                          <p>Now that I had the headphones on my head, I was finally ready to plug and play some music. I plugged the provided cable into the jack on the headphones and then the one on my iPhone 6. Then I called up Pandora. I tend to have a very eclectic music purview and have many stations set up for different moods. From <strong>John Williams</strong> to <strong>Fallout Boy</strong>, the sound quality of these headphones was remarkable. There is an amazing depth of sound and incredible highs and lows that make listening to music a truly breathtaking experience.</p>
+                                          <blockquote>
+                                             <p>It’s safe to say that because of my <strong>unique professional experiences</strong>, I’ve tested out a lot of headphones.</p>
+                                          </blockquote>
+                                          <p>In order to test how voices sounded, and the overall art of sound mixing, I pulled up Netflix on my iPad Air 2 and watched a few minutes of a movie to hear all the nuances of the film. None of them were lost. In fact, I ended up hearing sounds that I hadn’t heard before. Echoes…birds chirping…wind blowing through trees…breathing of the characters…it was very impressive what the headphones ended up bringing out for me.</p>
+                                          <p><em>I would highly recommend these to any sound mixing specialist.</em></p>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="post-footer post-footer-light row-container">
+                                    <div class="row-container">
+                                       <div class="row row-parent style-light no-top-padding double-bottom-padding" style="max-width: 800px; margin: auto;">
+                                          <div class="post-share">
+                                             <div class="detail-container margin-auto">
+                                                <div class="share-button share-buttons share-inline only-icon"></div>
+                                             </div>
+                                          </div>
+                                          <div id="comments" class="comments-area">
+                                             <h5 class="comments-title">
+                                                3 Comments		
+                                             </h5>
+                                             <div class="comment-list">
+                                                <section class="comments-list">
+                                                   <article class="comment even thread-even depth-1 parent" id="comment-66" itemscope itemtype="http://schema.org/Comment">
+                                                      <div class="comment-content post-content" itemprop="text">
+                                                         <figure class="gravatar"><img alt='' src='http://2.gravatar.com/avatar/86d7aecd056832288c1d854b5ddc23ce?s=256&amp;d=mm&amp;r=g' srcset='http://2.gravatar.com/avatar/86d7aecd056832288c1d854b5ddc23ce?s=512&amp;d=mm&amp;r=g 2x' class='avatar avatar-256 photo' height='256' width='256' /></figure>
+                                                         <div class="comment-meta post-meta" role="complementary">
+                                                            <h2 class="comment-author">
+                                                               <a class="comment-author-link" href="#" itemprop="author">John Doe</a>
+                                                            </h2>
+                                                            <time class="comment-meta-item" datetime="2015-06-16T18:30+01:00" itemprop="datePublished"><span>June 16th 2015, <a href="#comment-66" itemprop="url">6:30 pm</a></span></time>
+                                                            <p>I think the problem for me is the energistically benchmark focused growth strategies via superior supply chains. Compellingly reintermediate mission-critical potentialities whereas cross functional scenarios. Phosfluorescently re-engineer distributed processes without standardized supply chains. Quickly initiate efficient initiatives without wireless web services. Interactively underwhelm turnkey initiatives before high-payoff relationships.</p>
+                                                            <a rel='nofollow' class='comment-reply-link' href='index1b7b.html?replytocom=66#respond' onclick='return addComment.moveForm( "comment-66", "66", "respond", "20528" )' aria-label='Reply to John Doe'><span>Reply</span></a>					
+                                                         </div>
+                                                      </div>
+                                                      <section class="child-comments comments-list">
+                                                         <article class="comment odd alt depth-2" id="comment-67" itemscope itemtype="http://schema.org/Comment">
+                                                            <div class="comment-content post-content" itemprop="text">
+                                                               <figure class="gravatar"><img alt='' src='http://1.gravatar.com/avatar/1d75aa67c5a557e62747d4743ef034cd?s=256&amp;d=mm&amp;r=g' srcset='http://1.gravatar.com/avatar/1d75aa67c5a557e62747d4743ef034cd?s=512&amp;d=mm&amp;r=g 2x' class='avatar avatar-256 photo' height='256' width='256' /></figure>
+                                                               <div class="comment-meta post-meta" role="complementary">
+                                                                  <h2 class="comment-author">
+                                                                     <a class="comment-author-link" href="#" itemprop="author">Jennifer Freeman</a>
+                                                                  </h2>
+                                                                  <time class="comment-meta-item" datetime="2015-06-16T18:32+01:00" itemprop="datePublished"><span>June 16th 2015, <a href="#comment-67" itemprop="url">6:32 pm</a></span></time>
+                                                                  <p>Very good point which I had quickly initiate efficient initiatives without wireless web services. Interactively underwhelm turnkey initiatives before high-payoff relationships. Holisticly restore superior interfaces before flexible technology. Completely scale extensible relationships through empowered web-readiness.</p>
+                                                                  <a rel='nofollow' class='comment-reply-link' href='index5602.html?replytocom=67#respond' onclick='return addComment.moveForm( "comment-67", "67", "respond", "20528" )' aria-label='Reply to Jennifer Freeman'><span>Reply</span></a>					
+                                                               </div>
+                                                            </div>
+                                                         </article>
+                                                      </section>
+                                                   </article>
+                                                   <article class="comment even thread-odd thread-alt depth-1" id="comment-68" itemscope itemtype="http://schema.org/Comment">
+                                                      <div class="comment-content post-content" itemprop="text">
+                                                         <figure class="gravatar"><img alt='' src='http://0.gravatar.com/avatar/cd616de9f65d3d50f13711ff5238a1db?s=256&amp;d=mm&amp;r=g' srcset='http://0.gravatar.com/avatar/cd616de9f65d3d50f13711ff5238a1db?s=512&amp;d=mm&amp;r=g 2x' class='avatar avatar-256 photo' height='256' width='256' /></figure>
+                                                         <div class="comment-meta post-meta" role="complementary">
+                                                            <h2 class="comment-author">
+                                                               <a class="comment-author-link" href="#" itemprop="author">Willie Clark</a>
+                                                            </h2>
+                                                            <time class="comment-meta-item" datetime="2015-06-16T18:32+01:00" itemprop="datePublished"><span>June 16th 2015, <a href="#comment-68" itemprop="url">6:32 pm</a></span></time>
+                                                            <p>After all, we should remember compellingly reintermediate mission-critical potentialities whereas cross functional scenarios. Phosfluorescently re-engineer distributed processes without standardized supply chains. Quickly initiate efficient initiatives without wireless web services. Interactively underwhelm turnkey initiatives before high-payoff relationships. Holisticly restore superior interfaces before flexible technology.</p>
+                                                            <a rel='nofollow' class='comment-reply-link' href='indexa129.html?replytocom=68#respond' onclick='return addComment.moveForm( "comment-68", "68", "respond", "20528" )' aria-label='Reply to Willie Clark'><span>Reply</span></a>					
+                                                         </div>
+                                                      </div>
+                                                   </article>
+                                                </section>
+                                             </div>
+                                             <!-- .comment-list -->
+                                             <div>
+                                                <div id="respond" class="comment-respond">
+                                                   <h3 id="reply-title" class="comment-reply-title">Add comment <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond" style="display:none;">Cancel reply</a></small></h3>
+                                                   <form action="http://www.undsgn.com/uncode/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+                                                      <p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" aria-describedby="form-allowed-tags" aria-required="true"></textarea></p>
+                                                      <p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required='true' required='required' /></p>
+                                                      <p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" aria-describedby="email-notes" aria-required='true' required='required' /></p>
+                                                      <p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" /></p>
+                                                      <p class="form-submit"><input name="submit" type="submit" id="submit" class="btn" value="Post Comment" /> <input type='hidden' name='comment_post_ID' value='20528' id='comment_post_ID' />
+                                                         <input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+                                                      </p>
+                                                   </form>
+                                                </div>
+                                                <!-- #respond -->
+                                             </div>
+                                          </div>
+                                          <!-- #comments -->
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="row-container row-navigation row-navigation-light">
+                                 <div class="row row-parent style-light limit-width">
+                                    <nav class="post-navigation" role="navigation">
+                                       <ul class="navigation">
+                                          <li class="page-prev"><span class="btn-container"><a class="btn btn-link text-default-color btn-icon-left" href="http://www.undsgn.com/uncode/inspired-by-clouds/" rel="prev"><i class="fa fa-angle-left"></i><span>Prev</span></a></span></li>
+                                          <li class="nav-back"><span class="btn-container"><a class="btn btn-link text-default-color" href="http://www.undsgn.com/uncode/blog/blog-landing/">Main Blog</a></span></li>
+                                          <li class="page-next"><span class="btn-container"><span class="btn btn-link btn-icon-right btn-disable-hover">Next<i class="fa fa-angle-right"></i></span></span></li>
+                                       </ul>
+                                       <!-- .navigation -->
+                                    </nav>
+                                    <!-- .post-navigation -->
+                                 </div>
+                              </div>
+                           </div>
+                        </article>
+                     </div>
+                     <!-- sections container -->
+                  </div>
+                  <!-- page wrapper -->
+                  <footer id="colophon" class="site-footer">
+                     <div data-parent="true" class="style-color-rgdb-bg row-container mobile-hidden">
+                        <div class="row double-top-padding double-bottom-padding single-h-padding limit-width row-parent">
+                           <div class="row-inner">
+                              <div class="pos-top pos-left align_left column_parent col-lg-3 col-md-33 half-internal-gutter">
+                                 <div class="uncol style-dark"  >
+                                    <div class="uncoltable">
+                                       <div class="uncell no-block-padding">
+                                          <div class="uncont">
+                                             <div class="wpb_widgetised_column wpb_content_element">
+                                                <div class="wpb_wrapper">
+                                                   <aside id="text-5" class="widget widget_text widget-container sidebar-widgets">
+                                                      <h3 class="widget-title">ABOUT US</h3>
+                                                      <div class="textwidget">We design and develop themes for customers of all sizes, specializing in creating stylish, modern websites, web portfolios and e-commerce stores. We create a website that stands out.</div>
+                                                   </aside>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="pos-top pos-left align_left column_parent col-lg-3 tablet-hidden col-md-25 single-internal-gutter">
+                                 <div class="uncol style-dark"  >
+                                    <div class="uncoltable">
+                                       <div class="uncell no-block-padding">
+                                          <div class="uncont">
+                                             <div class="wpb_widgetised_column wpb_content_element">
+                                                <div class="wpb_wrapper">
+                                                   <aside id="most-recommended-posts-1" class="widget widget_most-recommended-posts widget-container sidebar-widgets">
+                                                      <h3 class="widget-title">RECOMMENDED POSTS</h3>
+                                                      <ul class="mostrecommendedposts">
+                                                         <li><a href="http://www.undsgn.com/uncode/inspired-by-clouds/" title="Inspired by clouds" rel="nofollow">Inspired by clouds</a></li>
+                                                         <li><a href="http://www.undsgn.com/uncode/top-deejay-headphones/" title="Top Deejay Headphones" rel="nofollow">Top Deejay Headphones</a></li>
+                                                         <li><a href="http://www.undsgn.com/uncode/stumbled-the-concept/" title="Stumbled the concept" rel="nofollow">Stumbled the concept</a></li>
+                                                         <li><a href="http://www.undsgn.com/uncode/trust-your-intuition/" title="Trust in your intuitions" rel="nofollow">Trust in your intuitions</a></li>
+                                                         <li><a href="http://www.undsgn.com/uncode/when-you-are-alone/" title="When you are alone" rel="nofollow">When you are alone</a></li>
+                                                      </ul>
+                                                   </aside>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="pos-top pos-left align_left column_parent col-lg-3 col-md-33 single-internal-gutter">
+                                 <div class="uncol style-dark"  >
+                                    <div class="uncoltable">
+                                       <div class="uncell no-block-padding">
+                                          <div class="uncont">
+                                             <div class="wpb_widgetised_column wpb_content_element">
+                                                <div class="wpb_wrapper">
+                                                   <aside id="recent-posts-6" class="widget widget_recent_entries widget-container sidebar-widgets">
+                                                      <h3 class="widget-title">LATEST BLOG NEWS</h3>
+                                                      <ul>
+                                                         <li>
+                                                            <a href="index.html">Calm over the horizon</a>
+                                                            <span class="post-date">June 4, 2015</span>
+                                                         </li>
+                                                         <li>
+                                                            <a href="http://www.undsgn.com/uncode/inspired-by-clouds/">Inspired by clouds</a>
+                                                            <span class="post-date">June 4, 2015</span>
+                                                         </li>
+                                                         <li>
+                                                            <a href="http://www.undsgn.com/uncode/make-it-clean-and-simple/">Make it clean and simple</a>
+                                                            <span class="post-date">June 4, 2015</span>
+                                                         </li>
+                                                      </ul>
+                                                   </aside>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="pos-top pos-left align_left column_parent col-lg-3 col-md-33 single-internal-gutter">
+                                 <div class="uncol style-dark"  >
+                                    <div class="uncoltable">
+                                       <div class="uncell no-block-padding">
+                                          <div class="uncont">
+                                             <div class="wpb_widgetised_column wpb_content_element">
+                                                <div class="wpb_wrapper">
+                                                   <aside id="tag_cloud-2" class="widget widget_tag_cloud widget-container sidebar-widgets">
+                                                      <h3 class="widget-title">TAGS</h3>
+                                                      <div class="tagcloud"><a href='http://www.undsgn.com/uncode/tag/design/' class='tag-link-17' title='4 topics' style='font-size: 8pt;'>Design</a>
+                                                         <a href='http://www.undsgn.com/uncode/tag/enjoy/' class='tag-link-19' title='6 topics' style='font-size: 18.5pt;'>Enjoy</a>
+                                                         <a href='http://www.undsgn.com/uncode/tag/holiday/' class='tag-link-15' title='4 topics' style='font-size: 8pt;'>Holiday</a>
+                                                         <a href='http://www.undsgn.com/uncode/tag/life/' class='tag-link-18' title='6 topics' style='font-size: 18.5pt;'>Life</a>
+                                                         <a href='http://www.undsgn.com/uncode/tag/music/' class='tag-link-22' title='4 topics' style='font-size: 8pt;'>Music</a>
+                                                         <a href='http://www.undsgn.com/uncode/tag/simple/' class='tag-link-20' title='5 topics' style='font-size: 13.6pt;'>Simple</a>
+                                                         <a href='http://www.undsgn.com/uncode/tag/sport/' class='tag-link-21' title='4 topics' style='font-size: 8pt;'>Sport</a>
+                                                         <a href='http://www.undsgn.com/uncode/tag/style/' class='tag-link-23' title='5 topics' style='font-size: 13.6pt;'>Style</a>
+                                                         <a href='http://www.undsgn.com/uncode/tag/tech/' class='tag-link-16' title='7 topics' style='font-size: 22pt;'>Tech</a>
+                                                         <a href='http://www.undsgn.com/uncode/tag/travel/' class='tag-link-12' title='6 topics' style='font-size: 18.5pt;'>Travel</a>
+                                                         <a href='http://www.undsgn.com/uncode/tag/trip/' class='tag-link-13' title='5 topics' style='font-size: 13.6pt;'>Trip</a>
+                                                         <a href='http://www.undsgn.com/uncode/tag/visiting/' class='tag-link-14' title='5 topics' style='font-size: 13.6pt;'>Visiting</a>
+                                                      </div>
+                                                   </aside>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <script id="script-233769" type="text/javascript">UNCODE.initRow(document.getElementById("script-233769"));</script>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="row-container style-dark-bg footer-last">
+                        <div class="row row-parent style-dark limit-width no-top-padding no-h-padding no-bottom-padding">
+                           <div class="site-info uncell col-lg-6 pos-middle text-left">&copy; 2015 Uncode All rights reserved</div>
+                           <!-- site info -->
+                           <div class="uncell col-lg-6 pos-middle text-right">
+                              <div class="social-icon icon-box icon-box-top icon-inline"><a href="http://facebook.com/" target="_blank"><i class="fa fa-social-facebook"></i></a></div>
+                              <div class="social-icon icon-box icon-box-top icon-inline"><a href="http://twitter.com/" target="_blank"><i class="fa fa-social-twitter"></i></a></div>
+                              <div class="social-icon icon-box icon-box-top icon-inline"><a href="http://www.pinterest.com/" target="_blank"><i class="fa fa-social-pinterest"></i></a></div>
+                              <div class="social-icon icon-box icon-box-top icon-inline"><a href="https://dribbble.com/" target="_blank"><i class="fa fa-social-dribbble"></i></a></div>
+                              <div class="social-icon icon-box icon-box-top icon-inline"><a href="https://www.linkedin.com/" target="_blank"><i class="fa fa-social-linkedin"></i></a></div>
+                           </div>
+                        </div>
+                     </div>
+                  </footer>
+               </div>
+               <!-- main container -->
+            </div>
+            <!-- main wrapper -->
+         </div>
+         <!-- box container -->
+      </div>
+      <!-- box wrapper -->
+      <div class="style-light footer-scroll-top"><a href="#" class="scroll-top"><i class="fa fa-angle-up fa-stack fa-rounded btn-default btn-hover-nobg"></i></a></div>
+      <div class="overlay overlay-contentscale style-dark style-dark-bg overlay-search" data-area="search" data-container="box-container">
+         <div class="mmb-container">
+            <div class="mobile-menu-button menu-button-offcanvas mobile-menu-button-dark lines-button x2 overlay-close close no-toggle" data-area="search" data-container="box-container"><span class="lines"></span></div>
+         </div>
+         <div class="search-container">
+            <form action="http://www.undsgn.com/uncode/" method="get">
+               <div class="search-container-inner">
+                  <input type="search" class="search-field form-fluid" placeholder="Search…" value="" name="s" title="Search for:">
+                  <i class="fa fa-search3"></i>
+               </div>
+            </form>
+         </div>
+      </div>
+</html>
