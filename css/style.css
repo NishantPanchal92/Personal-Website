@@ -10623,6 +10623,9 @@ div[class*=sharer-].share-button .social ul li:before {
 .share-button:not(.only-icon) .social ul li[class*=paper-plane]:hover {
   background-color: #999;
 }
+.share-button:not(.only-icon) .social ul li[class*=linkedin]:hover {
+  background-color: #2C8CC0;
+}
 .share-button.only-icon .social ul li[class*=facebook]:hover:before {
   color: #3B5998;
 }
@@ -10637,6 +10640,9 @@ div[class*=sharer-].share-button .social ul li:before {
 }
 .share-button.only-icon .social ul li[class*=paper-plane]:hover:before {
   color: #999;
+}
+.share-button.only-icon .social ul li[class*=linkedin]:hover:before {
+  color: #2C8CC0;
 }
 div[class*=sharer-].share-button.only-icon {
   display: inline-block !important;
