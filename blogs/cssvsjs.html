@@ -136,7 +136,8 @@
                                     <div class="header-content header-center header-middle header-align-center">
                                        <div class="header-content-inner" >
                                           <h1 class="header-title font-762333 fontsize-338686 font-weight-700 text-uppercase"><span>CSS vs JS Animation</span></h1>
-                                          <div class="post-info">September 30, 2015<span>|</span>By Nishant Panchal</div>
+                                          <div class="post-info">September 30, 2015<span>|</span> Paper Published in <a href="http://www.ijircce.com/upload/2015/september/85_Comparison.pdf" title="View paper published in International Journal of Innovative Research in Computer
+and Communication Engineering (IJIRCCE)" style="text-decoration: underline;">IJIRCCE</a><span>|</span>By Nishant Panchal</div>
                                        </div>
                                     </div>
                                  </div>
@@ -151,20 +152,161 @@
                                  <div class="post-content" style="max-width: 800px; margin: auto;">
                                     <div class="row-container">
                                        <div class="row row-parent style-light double-top-padding double-bottom-padding">
-                                          <p>Many years ago, I worked for my parents who own a video production company. Because it is a family business, you inevitably end up wearing many hats and being the czar of many different jobs. I mainly managed projects and worked as a video editor. On production, there were times that I was called on to work as an audio tech and was made to wear headphones on long production days. In those days, having a really good set of headphones that picked up every nuance of sound was essential to making sure the client got what they needed.</p>
-                                          <h4>First impressions.</h4>
-                                          <p>Naturally, my first impression of these headphones is based off of the look of them. They have a classic over-the-ear style that is highlighted by <strong>a blue LED light</strong> that indicates the power for the noise canceling. The padding on the ear pieces seems adequate for extended usage periods.</p>
-                                          <p>They are wired headphones, but the 3.5mm stereo mini-plug cable is detachable. Something else I noticed right of the bat was the very nice carrying case that comes with them. It has a hard plastic exterior with a soft cloth interior that helps to protect the surface of the headphones from scratches. I never truly appreciated cases for headphones until I started carrying them from place-to-place. Now I can’t imagine not having a case.</p>
-                                          <h4>A perfect fit.</h4>
-                                          <p>Once I gave the headphones a thorough once-over exam, I tried them on. As I mentioned, they have a classic <em>over-the-ear style</em> and just looking at them, the padding on the ear pieces seem adequate and the peak of the headband seemed to be a bit lacking, but you don’t really know comfort unless you try on the product. So, I slipped the headphones on and found them to be exquisitely comfortable.</p>
-                                          <h4>Quality.</h4>
-                                          <p>Now that I had the headphones on my head, I was finally ready to plug and play some music. I plugged the provided cable into the jack on the headphones and then the one on my iPhone 6. Then I called up Pandora. I tend to have a very eclectic music purview and have many stations set up for different moods. From <strong>John Williams</strong> to <strong>Fallout Boy</strong>, the sound quality of these headphones was remarkable. There is an amazing depth of sound and incredible highs and lows that make listening to music a truly breathtaking experience.</p>
-                                          <blockquote>
-                                             <p>It’s safe to say that because of my <strong>unique professional experiences</strong>, I’ve tested out a lot of headphones.</p>
-                                          </blockquote>
-                                          <p>In order to test how voices sounded, and the overall art of sound mixing, I pulled up Netflix on my iPad Air 2 and watched a few minutes of a movie to hear all the nuances of the film. None of them were lost. In fact, I ended up hearing sounds that I hadn’t heard before. Echoes…birds chirping…wind blowing through trees…breathing of the characters…it was very impressive what the headphones ended up bringing out for me.</p>
-                                          <p><em>I would highly recommend these to any sound mixing specialist.</em></p>
-                                       </div>
+                                          <h4>Abstract</h4>
+                                          <p>Animations are taking on the Internet and are an important aspect of each and every website. These animations can range from hover effects to complete interactivity built using <a href="https://en.wikipedia.org/wiki/WebGL" target="_blank">WebGL</a>. Animations help improve the usability of an application and provide an effective way of interacting with it. CSS and JavaScript are the most used tools for developing animations on the web; however, each one using them faces the dilemma of which technique to use. Both, CSS and JavaScript, are an integral part of every website and are most commonly used by all web developers. This article analyses all the aspects of CSS and JavaScript animations, which will in turn help you select the right technique for your needs.</p>
+                                          <h4>CSS Animation</h4>
+                                          <p>CSS animations work at element level of the web page, and a change to its property will gradually change the element from one style to another. Animation is a CSS property that allows us to animate any HTML element and modify as many CSS properties of the element, for as many times as we want. This provides an easy way to perform simple animation, but the start and end states of the animation are controlled by existing property values, and transitions provide little control to the author on how the animation progresses. At the moment, only WebKit browsers support CSS animations. The unsupported browsers will simply ignore the CSS animation code.</p>
+                                          <p>The start time of the animation is determined by the latter of the two instances: 
+																						<div class="uncode-wrapper uncode-list">
+																						<ul class="text-large icons">
+																							<li><i class="fa fa-arrow-right-thick"></i>The time at which the  <strong style="color: #303133">element</strong> that specifies the animation inline is resolved on the web page.</li>
+																							<li><i class="fa fa-arrow-right-thick"></i>The time at which the web page has loaded completely and fires the <strong style="color: #303133">document load</strong> event.</li>
+																						</ul>
+																						</div>
+																					</p>
+																					<p>
+																						For example, if an animation is specified in the document style sheet (<i>style</i> tag), the animation will begin when <strong>document load</strong> event is fired. However, if an animation is specified on an element (<i>inline style</i> properties) by modifying the style properties after the document loads, the animation will start once the computed style is resolved.
+																						The end of the animation is defined by the combination of the <strong>'animation-duration'</strong>, <strong>'animation-iteration-count'</strong> and <strong>'animation-fill-mode'</strong> CSS properties.
+																					</p>
+																					<p>
+																						In the following example, we will add the animation properties to an element with <strong>class=box</strong> that you wish to animate:
+<pre>.box {
+	height: 100px;
+	width: 100px;
+	background-color: black;
+	left: 300px;
+	top: 250px;
+	position: absolute;
+	animation-name: bounceIn;
+	animation-duration: 5000ms;
+	animation-iteration-count: infinite;
+	animation-direction: both;
+}
+@keyframes bounceIn {
+	0% {transform: scale(0.1); opacity: 0; }
+	10% {transform: scale(1.2); opacity: 0.5; }
+	20% {transform: scale(1); opacity: 1; }
+	100% {transform: translate(500px); color: red;}
+}</pre>
+																					</p>	
+                                          <h4>JavaScript Animation</h4>
+                                          <p>JavaScript animations perform gradual changes in the DOM element styles or the canvas objects. The entire animation is split into pieces, and each piece is executed when called by the timer. Since the timer intervals are very small, the animations look continuous and smooth. Creating JavaScript animations is, by comparison, a little more complex than writing CSS animations. But JavaScript animations give more control and power to the developer and the user to dynamically modify the animations on the web page. Most of the modern browsers support JavaScript animations.</p>
+                                          <p>Here is a sample code for moving a box (with "id=box") using requestAnimationFrame:
+<pre>var AnimationDuration = 1000;
+
+function tick() {
+	currentTime = Date.now();
+	valueTransform = (currentTime - startTime)/AnimationDuration;
+	document.getElementById("box").style.transform = 'translate('+ valueTransform*500 +'px)';
+	if(valueTransform<= 1)
+		window.requestAnimationFrame(tick);
+}
+
+function startAnimation()
+{
+	startTime = Date.now();
+	window.requestAnimationFrame(tick);	
+}
+
+startAnimation();</pre>
+                                          </p>
+                                          <h4>CSS vs JavaScript Animation</h4>
+                                          <p>Now let's analyse various aspects of both animation types to determine who's better.</p>
+                                          <h5 class="h5 font-weight-100"><span>Dependancy</span></h5>
+                                          <p>JavaScript provides complete control over the animations that users develop. They have the correct tools and commands to handle each step of the animation. It provides an easy way to modify the flow of the animation just by altering a few aspects of the animation. It allows you to seek directly to a particular portion in the animation, alter time scale of the animation, add callbacks at certain points of the animation and bind them to a set of playback events. It provides the power to developers allowing them to start/stop the animation on user actions such as click, key press, mouse move, etc. The sample code provided in the JavaScript section presents the self-independent nature of the JavaScript animation. The <strong>startAnimation()</strong> function can be called on click of a button.</p>
+                                          <p>CSS animations, on the other hand, depend on JavaScript to perform any user specific interactivity. CSS transitions provide a way to define animation effects to be applied to the element at a particular keyframe and CSS animation properties will help attach these effects to a particular element. The start of the animation is dependent on when the web page would load or the element is resolved. There is no way for users to dynamically modify the workflow or interact with the animation. This is where CSS animations are dependent on JavaScript for managing the state of the animations. JavaScript can simply add or remove appropriate classes from the element’s style properties, leaving the browser to handle animations. Consider the following code for example. This sample defines the initial animation for an element with class <strong>box</strong> and then moves it to a different position when the class <strong>move</strong> is added to it.</p>
+<pre>.box {
+  transform: translate(300px, 250px);
+  transition: transform 500ms;
+  background-color: black;
+  height: 100px;
+  width:100px;
+}
+.box.move {
+  transform: translate(500px, 250px);
+}</pre>                                    
+																					<p>JavaScript can be used to add and remove the “move” class to and from the element, and this control to toggle the animation can be given to the user on click of a button. The following command can be executed to toggle the above defined CSS animation:</p>
+<pre>var box=document.querySelector('.box');
+box.addEventListener('mouseover', function(){
+	box.classList.toggle('move');
+});
+</pre>																				      
+                                          <blockquote><p>Though CSS transition and animation properties have a wide range support for animation effects, it is dependent on JavaScript to provide user interaction and control.</p></blockquote>
+									                        <div class="divider-wrapper ">
+									                           <hr class="border-default-color separator-no-padding" style="border-top-width: 4px;">
+									                        </div>
+                                          <h5 class="h5 font-weight-100"><span>CPU Performance</span></h5>
+                                          <p>To measure the actual use of CPU to perform animation using each of the technique, we will use an animation created by GreenSock (developers of GreenSock Animation Platform (GSAP) JavaScript animation library)- <a href="https://css-tricks.com/myth-busting-css-animations-vs-javascript" target="_blank">https://css-tricks.com/myth-busting-css-animations-vs-javascript</a></p>
+                                       		<p>
+                                       		<div class="uncode-wrapper uncode-list">
+																						<ul class="text-large icons">
+																							<li><i class="fa fa-arrow-right-thick"></i>CSS</li>
+																						</ul>
+																					</div>
+																					The animation presented in Figure 3 allows users to perform animation either using CSS or JavaScript by selecting the respective option from “Engine” menu. Users can also select the quantity of boxes and the property of the element to animate. Following are the results of CPU utilization for the above animation:
+For CSS animations, considering the animation is run for 60 seconds, the diagram below shows the CPU usage while performing CSS animation. 20 samples are recorded from the below graph and computation of average CPU utilization is as below:</p>
+<pre><strong>&sum;CPU utilization samples</strong> = 51+58+68+61+61+59+63+77+77+63+70+58+65+63+77+80+80+80+80+80
+			 = <strong>1371</strong>
+
+<strong>Average CPU utilization</strong> = (&sum;CPU utilization samples- &sum;Existing CPU utilization)/20
+<strong>Average CPU utilization</strong> = (1371-(20*4))/20
+			= 1291/20
+			= <strong>64.55%</strong>
+</pre>
+																				<p>The value 80 (20*4) is being subtracted from total since the CPU utilization was already at 4% before starting the animation. Thus, 4 will be subtracted from each of the 20 samples recorded.</p>
+																				<p>
+																				<div class="uncode-wrapper uncode-list">
+																						<ul class="text-large icons">
+																							<li><i class="fa fa-arrow-right-thick"></i>JavaScript</li>
+																						</ul>
+																				</div>
+																				For JavaScript animations, considering the animation is run for 60 seconds, the diagram below shows the CPU usage while performing CSS animation. 20 samples are recorded from the below graph and computation of average CPU utilization is as below:</p>
+<pre><strong>&sum;CPU utilization samples</strong> = 28+30+32+30+30+30+30+32+32+31+30+30+44+30+30+30+30+30+30+30
+			 = <strong>619</strong>
+
+<strong>Average CPU utilization</strong> = (&sum;CPU utilization samples- &sum;Existing CPU utilization)/20
+<strong>Average CPU utilization</strong> = (619-(20*4))/20
+			= 1291/20
+			= <strong>29.95%</strong>
+</pre>																
+																				<p>The value 80 (20*4) is being subtracted from total since the CPU utilization was already at 4% before starting the animation. Thus, 4 will be subtracted from each of the 20 samples recorded.</p>
+																				<blockquote><p>The above analysis shows that animations using JavaScript are more than 100% efficient and faster than CSS-based animations.</p></blockquote>
+ 								                        <div class="divider-wrapper ">
+	  						                           <hr class="border-default-color separator-no-padding" style="border-top-width: 4px;">
+								                        </div>
+ 																				<h5 class="h5 font-weight-100"><span>Memory Use</span></h5>
+                                          <p>The memory usage Using the same animation provided in the previous step, the memory usage while performing CSS and JavaScript animations are discussed </p>
+                                       		<div class="uncode-wrapper uncode-list">
+																						<ul class="text-large icons">
+																							<li><i class="fa fa-arrow-right-thick"></i>CSS</li>
+																						</ul>
+																					</div>
+<pre>2.4 GB – 2.0 GB = 0.4 GB</pre>
+																				<p>Considering the memory usage was already at 2 GB before starting the animation, the CSS animations utilize approximately 400 MB of system memory.</p>
+																				<div class="uncode-wrapper uncode-list">
+																						<ul class="text-large icons">
+																							<li><i class="fa fa-arrow-right-thick"></i>JavaScript</li>
+																						</ul>
+																				</div>
+<pre>2.2 GB – 2.0 GB = 0.2 GB</pre>																
+																				<p>Considering the memory usage was already at 2 GB before starting the animation, the CSS animations utilize approximately 200 MB of system memory.</p>
+																				<blockquote><p>The above analysis shows that JavaScript utilize almost half the system memory than CSS, while performing animations. This provides more bandwidth for another process to run and ensure optimal performance.</p></blockquote>
+								                        <div class="divider-wrapper ">
+								                           <hr class="border-default-color separator-no-padding" style="border-top-width: 4px;">
+								                        </div>                                    
+																				<h5 class="h5 font-weight-100"><span>Speed</span></h5>
+																				<p>Web animations are limited to the resources allotted by a web browser due to which its performance and speed is completely dependent on how they are being processed. This section presents the aspects that affect the speed of animations using CSS and JavaScript.</p>
+																				<div class="uncode-wrapper uncode-list">
+																					<ul class="text-large icons">
+																						<li><i class="fa fa-arrow-right-thick"></i>CSS animations face a substantial lag while starting the animation. This is because it computes the complete layout of the web page along with animation properties and uploads the data to GPU for rendering on the screen. On the other end, JavaScript uses the main browser thread for computation and rendering the animation data on the screen. This helps the animation to initiate quickly without any delay.</li>
+																						<li><i class="fa fa-arrow-right-thick"></i>Though CSS uses hardware acceleration using GPU, only a few CSS properties actually benefit from it to improve performance. When animating top, left, width and height properties of the elements, that affect the document flow, JavaScript is faster across the board.</li>
+																						<li><i class="fa fa-arrow-right-thick"></i>While performing animations that require complex computations and need to modify several element styles, CSS transitions tend to lose their synchronization. This is because, GPU has a limited video memory to upload data. This increases the time for rendering cycle and degrades GPU’s performance. However, this is not true for JavaScript. The browser and CPU itself perform all complex computations. In addition, JavaScript can use GPU for 3D transforms whenever required.</li>
+																					</ul>
+																				</div>
+																				<h4>My Pick</h4>
+																				<blockquote><p>CSS transition and animation properties perform best for animations with simple and self-contained state changes. They provide a native solution that allows you to retain animation logic within stylesheets and avoid using JavaScript for modifying animation states. Most of the animations, like the changing name on homepage and fade-in/fade-out, are implemented using CSS in my website.</p></blockquote>
+																				<blockquote><p>JavaScript should be used to create stateful animations that require significant control over the flow of the animation. It helps keep the workflow manageable and allows developers to make any modifications quickly.</p></blockquote>
+                                      </div>
                                     </div>
                                  </div>
                                  <div class="post-footer post-footer-light row-container">
