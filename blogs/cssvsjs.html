@@ -212,9 +212,9 @@ startAnimation();</pre>
                                           </p>
                                           <h4>CSS vs JavaScript Animation</h4>
                                           <p>Now let's analyse various aspects of both animation types to determine who's better.</p>
-                                          <h5 class="h5 font-weight-100"><span>Dependancy</span></h5>
-                                          <p>JavaScript provides complete control over the animations that users develop. They have the correct tools and commands to handle each step of the animation. It provides an easy way to modify the flow of the animation just by altering a few aspects of the animation. It allows you to seek directly to a particular portion in the animation, alter time scale of the animation, add callbacks at certain points of the animation and bind them to a set of playback events. It provides the power to developers allowing them to start/stop the animation on user actions such as click, key press, mouse move, etc. The sample code provided in the JavaScript section presents the self-independent nature of the JavaScript animation. The <strong>startAnimation()</strong> function can be called on click of a button.</p>
-                                          <p>CSS animations, on the other hand, depend on JavaScript to perform any user specific interactivity. CSS transitions provide a way to define animation effects to be applied to the element at a particular keyframe and CSS animation properties will help attach these effects to a particular element. The start of the animation is dependent on when the web page would load or the element is resolved. There is no way for users to dynamically modify the workflow or interact with the animation. This is where CSS animations are dependent on JavaScript for managing the state of the animations. JavaScript can simply add or remove appropriate classes from the element’s style properties, leaving the browser to handle animations. Consider the following code for example. This sample defines the initial animation for an element with class <strong>box</strong> and then moves it to a different position when the class <strong>move</strong> is added to it.</p>
+                                          <h5 class="h5 font-weight-100"><span><strong>Dependancy:</strong></span></h5>
+                                          <p><strong>JavaScript</strong> provides complete control over the animations that users develop. They have the correct tools and commands to handle each step of the animation. It provides an easy way to modify the flow of the animation just by altering a few aspects of the animation. It allows you to seek directly to a particular portion in the animation, alter time scale of the animation, add callbacks at certain points of the animation and bind them to a set of playback events. It provides the power to developers allowing them to start/stop the animation on user actions such as click, key press, mouse move, etc. The sample code provided in the JavaScript section presents the self-independent nature of the JavaScript animation. The <strong>startAnimation()</strong> function can be called on click of a button.</p>
+                                          <p><strong>CSS animations</strong>, on the other hand, depend on JavaScript to perform any user specific interactivity. CSS transitions provide a way to define animation effects to be applied to the element at a particular keyframe and CSS animation properties will help attach these effects to a particular element. The start of the animation is dependent on when the web page would load or the element is resolved. There is no way for users to dynamically modify the workflow or interact with the animation. This is where CSS animations are dependent on JavaScript for managing the state of the animations. JavaScript can simply add or remove appropriate classes from the element’s style properties, leaving the browser to handle animations. Consider the following code for example. This sample defines the initial animation for an element with class <strong>box</strong> and then moves it to a different position when the <strong>class=move</strong> is added to it.</p>
 <pre>.box {
   transform: translate(300px, 250px);
   transition: transform 500ms;
@@ -225,7 +225,7 @@ startAnimation();</pre>
 .box.move {
   transform: translate(500px, 250px);
 }</pre>                                    
-																					<p>JavaScript can be used to add and remove the “move” class to and from the element, and this control to toggle the animation can be given to the user on click of a button. The following command can be executed to toggle the above defined CSS animation:</p>
+																					<p><strong>JavaScript</strong> can be used to <strong>add and remove the move class</strong> to and from the element, and this control to toggle the animation can be given to the user on click of a button. The following command can be executed to toggle the above defined CSS animation:</p>
 <pre>var box=document.querySelector('.box');
 box.addEventListener('mouseover', function(){
 	box.classList.toggle('move');
@@ -235,16 +235,15 @@ box.addEventListener('mouseover', function(){
 									                        <div class="divider-wrapper ">
 									                           <hr class="border-default-color separator-no-padding" style="border-top-width: 4px;">
 									                        </div>
-                                          <h5 class="h5 font-weight-100"><span>CPU Performance</span></h5>
+                                          <h5 class="h5 font-weight-100"><span><strong>CPU Performance:</strong></span></h5>
                                           <p>To measure the actual use of CPU to perform animation using each of the technique, we will use an animation created by GreenSock (developers of GreenSock Animation Platform (GSAP) JavaScript animation library)- <a href="https://css-tricks.com/myth-busting-css-animations-vs-javascript" target="_blank">https://css-tricks.com/myth-busting-css-animations-vs-javascript</a></p>
-                                       		<p>
                                        		<div class="uncode-wrapper uncode-list">
 																						<ul class="text-large icons">
 																							<li><i class="fa fa-arrow-right-thick"></i>CSS</li>
 																						</ul>
 																					</div>
-																					The animation presented in Figure 3 allows users to perform animation either using CSS or JavaScript by selecting the respective option from “Engine” menu. Users can also select the quantity of boxes and the property of the element to animate. Following are the results of CPU utilization for the above animation:
-For CSS animations, considering the animation is run for 60 seconds, the diagram below shows the CPU usage while performing CSS animation. 20 samples are recorded from the below graph and computation of average CPU utilization is as below:</p>
+																					<p style="margin-top: 0px">The animation presented in the above link allows user to perform animation either using CSS or JavaScript by selecting the respective option from <i>Engine</i> menu. Users can also select the quantity of boxes and the property of the element to animate. Following are the results of CPU utilization for the above animation:
+Considering the animation is run for <strong>60 seconds</strong>, <strong>20 samples</strong> are recorded for computation of <strong>Average CPU Utilization</strong> is as below:</p>
 <pre><strong>&sum;CPU utilization samples</strong> = 51+58+68+61+61+59+63+77+77+63+70+58+65+63+77+80+80+80+80+80
 			 = <strong>1371</strong>
 
@@ -253,14 +252,13 @@ For CSS animations, considering the animation is run for 60 seconds, the diagram
 			= 1291/20
 			= <strong>64.55%</strong>
 </pre>
-																				<p>The value 80 (20*4) is being subtracted from total since the CPU utilization was already at 4% before starting the animation. Thus, 4 will be subtracted from each of the 20 samples recorded.</p>
-																				<p>
+																				<p>The <strong>value 80 (20*4)</strong> is being subtracted from total since the CPU utilization was already at <strong>4% before starting</strong> the animation. Thus, 4 will be subtracted from each of the 20 samples recorded.</p>
 																				<div class="uncode-wrapper uncode-list">
 																						<ul class="text-large icons">
 																							<li><i class="fa fa-arrow-right-thick"></i>JavaScript</li>
 																						</ul>
 																				</div>
-																				For JavaScript animations, considering the animation is run for 60 seconds, the diagram below shows the CPU usage while performing CSS animation. 20 samples are recorded from the below graph and computation of average CPU utilization is as below:</p>
+																				<p style="margin-top: 0px">For JavaScript animations, considering the animation is run for <strong>60 seconds</strong>, <strong>20 samples</strong> are recorded for computation of <strong>Average CPU Utilization</strong> is as below:</p>
 <pre><strong>&sum;CPU utilization samples</strong> = 28+30+32+30+30+30+30+32+32+31+30+30+44+30+30+30+30+30+30+30
 			 = <strong>619</strong>
 
@@ -269,13 +267,13 @@ For CSS animations, considering the animation is run for 60 seconds, the diagram
 			= 1291/20
 			= <strong>29.95%</strong>
 </pre>																
-																				<p>The value 80 (20*4) is being subtracted from total since the CPU utilization was already at 4% before starting the animation. Thus, 4 will be subtracted from each of the 20 samples recorded.</p>
+																				<p>The <strong>value 80 (20*4)</strong> is being subtracted from total since the CPU utilization was already at <strong>4% before starting the animation</strong>. Thus, 4 will be subtracted from each of the 20 samples recorded.</p>
 																				<blockquote><p>The above analysis shows that animations using JavaScript are more than 100% efficient and faster than CSS-based animations.</p></blockquote>
  								                        <div class="divider-wrapper ">
 	  						                           <hr class="border-default-color separator-no-padding" style="border-top-width: 4px;">
 								                        </div>
- 																				<h5 class="h5 font-weight-100"><span>Memory Use</span></h5>
-                                          <p>The memory usage Using the same animation provided in the previous step, the memory usage while performing CSS and JavaScript animations are discussed </p>
+ 																				<h5 class="h5 font-weight-100"><span><strong>Memory Use:</strong></span></h5>
+                                          <p>The memory usage Using the same animation provided in the previous step, the memory usage while performing CSS and JavaScript animations are discussed:</p>
                                        		<div class="uncode-wrapper uncode-list">
 																						<ul class="text-large icons">
 																							<li><i class="fa fa-arrow-right-thick"></i>CSS</li>
@@ -294,7 +292,7 @@ For CSS animations, considering the animation is run for 60 seconds, the diagram
 								                        <div class="divider-wrapper ">
 								                           <hr class="border-default-color separator-no-padding" style="border-top-width: 4px;">
 								                        </div>                                    
-																				<h5 class="h5 font-weight-100"><span>Speed</span></h5>
+																				<h5 class="h5 font-weight-100"><span><strong>Speed:</strong></span></h5>
 																				<p>Web animations are limited to the resources allotted by a web browser due to which its performance and speed is completely dependent on how they are being processed. This section presents the aspects that affect the speed of animations using CSS and JavaScript.</p>
 																				<div class="uncode-wrapper uncode-list">
 																					<ul class="text-large icons">
