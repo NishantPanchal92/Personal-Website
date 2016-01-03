@@ -861,7 +861,7 @@ button[type="submit"],
 .panel-title > a span,
 .wc-forward,
 .wc-forward a {
-  font-weight: 600 !important;
+  font-weight: 600;
   font-family: Poppins !important;
   letter-spacing: 0.1em;
   text-transform: uppercase;
