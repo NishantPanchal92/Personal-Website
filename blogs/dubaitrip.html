@@ -1,236 +1,755 @@
 <!DOCTYPE html>
 <html class="no-touch" lang="en-US" prefix="og: http://ogp.me/ns#" xmlns="http://www.w3.org/1999/xhtml" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
-   <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>CSS vs JS Animation - Nishant's Blog</title>
-      
-      <style id='rs-plugin-settings-inline-css' type='text/css'>
-         .tp-caption a{color:#ff7302;text-shadow:none;-webkit-transition:all 0.2s ease-out;-moz-transition:all 0.2s ease-out;-o-transition:all 0.2s ease-out;-ms-transition:all 0.2s ease-out}.tp-caption a:hover{color:#ffa902}
-      </style>
-      <link rel="stylesheet" id='uncode-style-css' type="text/css" href="../css/style.css">
-      <style id='uncode-style-inline-css' type='text/css'>
-         @media (min-width: 960px) { .limit-width { max-width: 1200px; margin: auto;}}
-         .menu-primary ul.menu-smart > li > a, .menu-primary ul.menu-smart li.dropdown > a, .menu-primary ul.menu-smart li.mega-menu > a, .vmenu-container ul.menu-smart > li > a, .vmenu-container ul.menu-smart li.dropdown > a { text-transform: uppercase; }
-      </style>
-      <link rel='stylesheet' id='uncodefont-google-css'  href='http://fonts.googleapis.com/css?family=Poppins%3A300%2Cregular%2C500%2C600%2C700%7CHind%3A300%2Cregular%2C500%2C600%2C700%7CDroid+Serif%3Aregular%2Citalic%2C700%2C700italic%7CDosis%3A200%2C300%2Cregular%2C500%2C600%2C700%2C800%7CPlayfair+Display%3Aregular%2Citalic%2C700%2C700italic%2C900%2C900italic%7COswald%3A300%2Cregular%2C700&amp;subset=devanagari%2Clatin-ext%2Clatin%2Ccyrillic&amp;ver=1.0.0' type='text/css' media='all' />
-      <link rel="stylesheet" id='uncode-style-css' type="text/css" href="../css/style-custom.css">
-      <link rel="stylesheet" id='uncode-style-css' type="text/css" href="../css/uncode-child/style.css">
-      <link rel="stylesheet" id='uncode-style-css' type="text/css" href="../css/uncode-icons.css">
-      <link rel="stylesheet" id='uncode-style-css' type="text/css" href="../css/uncodefont.css">
-      <link rel='stylesheet' id='dashicons-css'  href='../css/dashicons.min.css' type='text/css' media='all' />
-      <link rel='stylesheet' id='ls-google-fonts-css'  href='http://fonts.googleapis.com/css?family=Lato:100,300,regular,700,900%7COpen+Sans:300%7CIndie+Flower:regular%7COswald:300,regular,700&amp;subset=latin%2Clatin-ext' type='text/css' media='all' />	
-      
-      <script type='text/javascript' src='../js/jquery.js?ver=1.11.3'></script>
-      <script type='text/javascript' src='../js/jquery-migrate.min.js'></script>
-      <script type='text/javascript' src='../js/greensock.js'></script>
-      <script type='text/javascript' src='../js/layerslider.kreaturamedia.jquery.js'></script>
-      <script type='text/javascript' src='../js/layerslider.transitions.js'></script>
-      <script type='text/javascript' src='../js/jquery.themepunch.tools.min.js'></script>
-      <script type='text/javascript' src='../js/jquery.themepunch.revolution.min.js'></script>
-      <script type='text/javascript' src='../js/ai-uncode.min.js' id='uncodeAI' data-breakpoints-images='258,516,720,1032,1440,2064,2880'></script>
-      <script type='text/javascript' src='../js/init.min.js'></script>
-
-      <style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
-      <noscript>
-         <style type="text/css"> .wpb_animate_when_almost_visible { opacity: 1; }</style>
-      </noscript>
-   </head>
-   <body class="single single-post postid-20528 single-format-standard  style-color-wayh-bg group-blog smooth-scroller hmenu hmenu-position-right header-full-width main-center-align wpb-js-composer js-comp-ver-4.9.1 vc_responsive">
-      <div class="box-wrapper">
-         <div class="box-container">
-            <script type="text/javascript">UNCODE.initBox();</script>
-            <!-- Menu Bar -->
-						<div class="menu-wrapper menu-shrink menu-sticky menu-no-arrows">
-							<header id="masthead" class="navbar menu-primary menu-light submenu-dark menu-transparent menu-add-padding style-light-original menu-absolute menu-with-logo">
-								<div class="menu-container style-color-xsdn-bg menu-borders">
-									<div class="row-menu">
-										<div class="row-menu-inner">
-											<div class="col-lg-0 logo-container megamenu-diff middle">
-												<div id="main-logo" class="navbar-header style-light">
-														<a href="../index.html#home" class="navbar-brand" data-minheight="16">
-															<div class="html-code" style="height: 16px">
-																<canvas class="logo-canvas" height="16" width="150"></canvas>
-																<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-				 viewBox="0 0 150 16" style="enable-background:new 0 0 150 16;" xml:space="preserve">
-																	<style type="text/css">
-																		.st0{fill:#010101;}
-																	</style>
-																	<g>
-																		<path class="st0" d="M8.3,2.1h2.5v13.6H8.3L2.7,6.3v9.4H0.2V2.1h2.5l5.6,9.4V2.1z"/>
-																		<path class="st0" d="M16.3,2.2c0,0.5-0.1,0.9-0.4,1.2c-0.3,0.3-0.7,0.5-1.1,0.5S14,3.7,13.7,3.4c-0.3-0.3-0.4-0.7-0.4-1.2
-																			s0.1-0.9,0.4-1.2s0.6-0.5,1.1-0.5c0.4,0,0.8,0.2,1.1,0.5C16.1,1.3,16.3,1.7,16.3,2.2z M13.5,15.7V4.9H16v10.8
-																			C16,15.7,13.5,15.7,13.5,15.7z"/>
-																		<path class="st0" d="M18.1,8.1c0-0.9,0.4-1.7,1.1-2.4c0.7-0.6,1.7-1,2.9-1S24.3,5,25,5.6s1.1,1.5,1.2,2.6h-2.6
-																			c-0.1-0.9-0.6-1.4-1.5-1.4c-0.5,0-0.8,0.1-1.1,0.3c-0.3,0.2-0.4,0.5-0.4,0.9c0,0.4,0.2,0.6,0.6,0.9c0.4,0.2,0.9,0.4,1.4,0.5
-																			c0.6,0.1,1.1,0.3,1.7,0.4c0.6,0.2,1,0.5,1.4,0.9s0.6,1,0.6,1.8c0,1-0.4,1.8-1.1,2.4c-0.8,0.6-1.7,0.9-2.9,0.9s-2.1-0.3-2.9-0.9
-																			s-1.2-1.5-1.2-2.6h2.6c0.1,0.9,0.6,1.4,1.6,1.4c0.5,0,0.8-0.1,1.1-0.3s0.4-0.5,0.4-0.9s-0.2-0.7-0.6-0.9c-0.4-0.2-0.9-0.4-1.4-0.5
-																			c-0.6-0.1-1.1-0.3-1.7-0.4c-0.6-0.2-1-0.5-1.4-0.9C18.3,9.3,18.1,8.8,18.1,8.1z"/>
-																		<path class="st0" d="M30.9,1.3v5.2c0.6-1.2,1.7-1.8,3.1-1.8c1.1,0,2.1,0.4,2.8,1.2s1.1,1.9,1.1,3.4v6.3h-2.5V9.7
-																			c0-0.8-0.2-1.5-0.6-1.9c-0.4-0.4-0.9-0.7-1.6-0.7c-0.7,0-1.2,0.2-1.6,0.7C31.2,8.2,31,8.9,31,9.7v5.9h-2.5V1.3H30.9z"/>
-																		<path class="st0" d="M41.1,14.3c-0.9-1-1.3-2.4-1.3-4s0.4-2.9,1.3-4c0.9-1,2-1.5,3.4-1.5s2.4,0.6,3.1,1.8V4.9H50v10.8h-2.5v-1.8
-																			c-0.8,1.3-1.8,2-3.1,2C43.1,15.8,42,15.3,41.1,14.3z M46.7,12.6c0.5-0.6,0.8-1.3,0.8-2.3S47.2,8.5,46.7,8c-0.5-0.6-1.1-0.8-1.8-0.8
-																			S43.6,7.5,43.1,8c-0.5,0.6-0.8,1.3-0.8,2.3s0.3,1.8,0.8,2.3c0.5,0.6,1.1,0.9,1.8,0.9C45.6,13.5,46.2,13.2,46.7,12.6z"/>
-																		<path class="st0" d="M55.2,4.9v1.6c0.6-1.2,1.7-1.8,3.1-1.8c1.1,0,2.1,0.4,2.8,1.2c0.7,0.8,1.1,1.9,1.1,3.4v6.3h-2.5V9.7
-																			c0-0.8-0.2-1.5-0.6-1.9c-0.4-0.4-0.9-0.7-1.6-0.7s-1.2,0.2-1.6,0.7c-0.4,0.4-0.6,1.1-0.6,1.9v5.9h-2.5V4.9H55.2z"/>
-																		<path class="st0" d="M68.6,13.4h1.2v2.3h-1.6c-1,0-1.8-0.3-2.3-0.8S65,13.6,65,12.4V7.1H64V4.9h1V2.3h2.5V5h2.2v2.2h-2.2v5.3
-																			c0,0.3,0.1,0.6,0.2,0.7C67.9,13.3,68.2,13.4,68.6,13.4z"/>
-																		<path class="st0" d="M85.2,8.9c-0.3,0.4-0.8,0.8-1.4,1c-0.6,0.3-1.3,0.4-2.2,0.4h-2.1v5.4H77V2.1h4.6c1.4,0,2.6,0.4,3.3,1.2
-																			c0.8,0.8,1.2,1.7,1.2,2.8C86.2,7.1,85.9,8.1,85.2,8.9z M79.6,8.2h2.1c0.6,0,1.1-0.2,1.4-0.5c0.3-0.4,0.5-0.8,0.5-1.4
-																			s-0.2-1.1-0.5-1.4c-0.3-0.4-0.8-0.5-1.4-0.5h-2.1V8.2z"/>
-																		<path class="st0" d="M88.7,14.3c-0.9-1-1.3-2.4-1.3-4s0.4-2.9,1.3-4c0.9-1,2-1.5,3.4-1.5s2.4,0.6,3.1,1.8V4.9h2.5v10.8h-2.5v-1.8
-																			c-0.8,1.3-1.8,2-3.1,2C90.7,15.8,89.6,15.3,88.7,14.3z M94.4,12.6c0.5-0.6,0.8-1.3,0.8-2.3S94.9,8.5,94.4,8
-																			c-0.5-0.6-1.1-0.8-1.8-0.8S91.2,7.5,90.8,8c-0.5,0.6-0.8,1.3-0.8,2.3s0.3,1.8,0.8,2.3c0.5,0.6,1.1,0.9,1.8,0.9S93.9,13.2,94.4,12.6
-																			z"/>
-																		<path class="st0" d="M102.9,4.9v1.6c0.6-1.2,1.7-1.8,3.1-1.8c1.1,0,2.1,0.4,2.8,1.2c0.7,0.8,1.1,1.9,1.1,3.4v6.3h-2.5V9.7
-																			c0-0.8-0.2-1.5-0.6-1.9c-0.4-0.4-0.9-0.7-1.6-0.7s-1.2,0.2-1.6,0.7c-0.4,0.4-0.6,1.1-0.6,1.9v5.9h-2.5V4.9H102.9z"/>
-																		<path class="st0" d="M113,14.3c-0.9-1-1.4-2.4-1.4-4s0.5-3,1.4-4s2.1-1.5,3.5-1.5c1.2,0,2.2,0.3,3,1c0.8,0.6,1.4,1.5,1.6,2.7h-2.7
-																			c-0.3-0.9-1-1.3-1.9-1.3c-0.7,0-1.3,0.3-1.7,0.9s-0.6,1.4-0.6,2.4s0.2,1.8,0.6,2.4c0.4,0.6,1,0.9,1.7,0.9c1,0,1.6-0.5,1.9-1.4h2.7
-																			c-0.3,1.1-0.8,2-1.7,2.7c-0.8,0.7-1.8,1-3,1C115.1,15.8,113.8,15.3,113,14.3z"/>
-																		<path class="st0" d="M125.6,1.3v5.2c0.6-1.2,1.7-1.8,3.1-1.8c1.1,0,2.1,0.4,2.8,1.2s1.1,1.9,1.1,3.4v6.3h-2.6V9.7
-																			c0-0.8-0.2-1.5-0.6-1.9c-0.4-0.4-0.9-0.7-1.6-0.7c-0.7,0-1.2,0.2-1.6,0.7c-0.4,0.4-0.6,1.1-0.6,1.9v5.9H123V1.3H125.6z"/>
-																		<path class="st0" d="M135.6,14.3c-0.9-1-1.3-2.4-1.3-4s0.4-2.9,1.3-4c0.9-1,2-1.5,3.4-1.5s2.4,0.6,3.1,1.8V4.9h2.5v10.8h-2.5v-1.8
-																			c-0.8,1.3-1.8,2-3.1,2C137.6,15.8,136.6,15.3,135.6,14.3z M141.3,12.6c0.5-0.6,0.8-1.3,0.8-2.3s-0.3-1.8-0.8-2.3
-																			c-0.5-0.6-1.1-0.8-1.8-0.8s-1.3,0.3-1.8,0.8c-0.6,0.5-0.8,1.3-0.8,2.3s0.3,1.8,0.8,2.3c0.5,0.6,1.1,0.9,1.8,0.9
-																			S140.8,13.2,141.3,12.6z"/>
-																		<path class="st0" d="M147.3,15.7V1.3h2.5v14.4H147.3z"/>											
-																	</g>
-																</svg>
-															</div>
-														</a>
-													</div>
-												<div class="mmb-container"><div class="mobile-menu-button mobile-menu-button-light lines-button x2"><span class="lines"></span></div></div>
-											</div>
-											<div class="col-lg-12 main-menu-container middle">
-												<div class="menu-horizontal">
-													<div class="menu-horizontal-inner">
-														<div class="nav navbar-nav navbar-main navbar-nav-first">
-															<ul id="menu-main-menu" class="menu-primary-inner menu-smart sm">
-																<li id="menu-item-42967" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-object-custom menu-item-42967"><a title="Home" href="../index.html#home">Home<i class="fa fa-dropdown"></i></a></li>
-																<li id="menu-item-42968" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-object-custom menu-item-42968"><a title="Amout Me" href="../index.html#about">About Me<i class="fa fa-dropdown"></i></a></li>
-																<li id="menu-item-42969" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-object-custom menu-item-42969"><a title="Projects" href="../index.html#works">Projects<i class="fa fa-dropdown"></i></a></li>
-                                <li id="menu-item-42969" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-object-custom menu-item-42969"><a title="Resume" href="../index.html#resume">Resume<i class="fa fa-dropdown"></i></a></li>
-                                <li id="menu-item-43666" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-object-custom menu-item-43666"><a title="Blog" href="../index.html#blog">Blogs<i class="fa fa-dropdown"></i></a></li>
-																<li id="menu-item-42970" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-object-custom menu-item-42970"><a title="Contact Me" href="../index.html#contact">Contact Me<i class="fa fa-dropdown"></i></a></li>
-															</ul>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</header>
-							</div>
-			        <script type="text/javascript">UNCODE.fixMenuHeight();</script>
-            <div class="main-wrapper">
-               <div class="main-container">
-                  <div class="page-wrapper">
-                     <div class="sections-container">
-                        <div id="page-header">
-                           <div class="header-basic style-dark">
-                              <div class="background-element header-wrapper header-scroll-opacity header-parallax style-color-wayh-bg header-only-text" data-height="75" style="min-height: 300px;">
-                                 <div class="header-bg-wrapper">
-                                    <div class="header-bg" style="background-image: url(https://dl.dropboxusercontent.com/s/8o4rly86qtudoet/dubai_2-1440x900.jpg);"></div>
-                                    <div class="block-bg-overlay style-color-wayh-bg" style="opacity: 0.65;"></div>
-                                 </div>
-                                 <div class="header-main-container limit-width">
-                                    <div class="header-content header-center header-middle header-align-center">
-                                       <div class="header-content-inner" >
-                                          <h1 class="header-title font-762333 fontsize-338686 font-weight-700 text-uppercase"><span>Trip to Dubai</span></h1>
-                                          <div class="post-info">March 15, 2015<span>|</span>By Nishant Panchal</div>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="header-scrolldown style-dark"><i class="fa fa-angle-down"></i></div>
-                              </div>
-                           </div>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSS vs JS Animation - Nishant's Blog</title>
+    <style id='rs-plugin-settings-inline-css' type='text/css'>
+      .tp-caption a{color:#ff7302;text-shadow:none;-webkit-transition:all 0.2s ease-out;-moz-transition:all 0.2s ease-out;-o-transition:all 0.2s ease-out;-ms-transition:all 0.2s ease-out}.tp-caption a:hover{color:#ffa902}
+    </style>
+    <link rel="stylesheet" id='uncode-style-css' type="text/css" href="../css/style.css">
+    <style id='uncode-style-inline-css' type='text/css'>
+      @media (min-width: 960px) { .limit-width { max-width: 1200px; margin: auto;}}
+      .menu-primary ul.menu-smart > li > a, .menu-primary ul.menu-smart li.dropdown > a, .menu-primary ul.menu-smart li.mega-menu > a, .vmenu-container ul.menu-smart > li > a, .vmenu-container ul.menu-smart li.dropdown > a { text-transform: uppercase; }
+    </style>
+    <link rel='stylesheet' id='uncodefont-google-css'  href='http://fonts.googleapis.com/css?family=Poppins%3A300%2Cregular%2C500%2C600%2C700%7CHind%3A300%2Cregular%2C500%2C600%2C700%7CDroid+Serif%3Aregular%2Citalic%2C700%2C700italic%7CDosis%3A200%2C300%2Cregular%2C500%2C600%2C700%2C800%7CPlayfair+Display%3Aregular%2Citalic%2C700%2C700italic%2C900%2C900italic%7COswald%3A300%2Cregular%2C700&amp;subset=devanagari%2Clatin-ext%2Clatin%2Ccyrillic&amp;ver=1.0.0' type='text/css' media='all' />
+    <link rel="stylesheet" id='uncode-style-css' type="text/css" href="../css/style-custom.css">
+    <link rel="stylesheet" id='uncode-style-css' type="text/css" href="../css/uncode-child/style.css">
+    <link rel="stylesheet" id='uncode-style-css' type="text/css" href="../css/uncode-icons.css">
+    <link rel="stylesheet" id='uncode-style-css' type="text/css" href="../css/uncodefont.css">
+    <link rel='stylesheet' id='dashicons-css'  href='../css/dashicons.min.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='ls-google-fonts-css'  href='http://fonts.googleapis.com/css?family=Lato:100,300,regular,700,900%7COpen+Sans:300%7CIndie+Flower:regular%7COswald:300,regular,700&amp;subset=latin%2Clatin-ext' type='text/css' media='all' />
+    <script type='text/javascript' src='../js/jquery.js?ver=1.11.3'></script>
+    <script type='text/javascript' src='../js/jquery-migrate.min.js'></script>
+    <script type='text/javascript' src='../js/greensock.js'></script>
+    <script type='text/javascript' src='../js/layerslider.kreaturamedia.jquery.js'></script>
+    <script type='text/javascript' src='../js/layerslider.transitions.js'></script>
+    <script type='text/javascript' src='../js/jquery.themepunch.tools.min.js'></script>
+    <script type='text/javascript' src='../js/jquery.themepunch.revolution.min.js'></script>
+    <script type='text/javascript' src='../js/ai-uncode.min.js' id='uncodeAI' data-breakpoints-images='258,516,720,1032,1440,2064,2880'></script>
+    <script type='text/javascript' src='../js/init.min.js'></script>
+    <style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+    <noscript>
+      <style type="text/css"> .wpb_animate_when_almost_visible { opacity: 1; }</style>
+    </noscript>
+  </head>
+  <body class="single single-post postid-20528 single-format-standard  style-color-wayh-bg group-blog smooth-scroller hmenu hmenu-position-right header-full-width main-center-align wpb-js-composer js-comp-ver-4.9.1 vc_responsive">
+    <div class="box-wrapper">
+      <div class="box-container">
+        <script type="text/javascript">UNCODE.initBox();</script>
+        <!-- Menu Bar -->
+        <div class="menu-wrapper menu-shrink menu-sticky menu-no-arrows">
+          <header id="masthead" class="navbar menu-primary menu-light submenu-dark menu-transparent menu-add-padding style-light-original menu-absolute menu-with-logo">
+            <div class="menu-container style-color-xsdn-bg menu-borders">
+              <div class="row-menu">
+                <div class="row-menu-inner">
+                  <div class="col-lg-0 logo-container megamenu-diff middle">
+                    <div id="main-logo" class="navbar-header style-light">
+                      <a href="../index.html#home" class="navbar-brand" data-minheight="16">
+                        <div class="html-code" style="height: 16px">
+                          <canvas class="logo-canvas" height="16" width="150"></canvas>
+                          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            viewBox="0 0 150 16" style="enable-background:new 0 0 150 16;" xml:space="preserve">
+                            <style type="text/css">
+                              .st0{fill:#010101;}
+                            </style>
+                            <g>
+                              <path class="st0" d="M8.3,2.1h2.5v13.6H8.3L2.7,6.3v9.4H0.2V2.1h2.5l5.6,9.4V2.1z"/>
+                              <path class="st0" d="M16.3,2.2c0,0.5-0.1,0.9-0.4,1.2c-0.3,0.3-0.7,0.5-1.1,0.5S14,3.7,13.7,3.4c-0.3-0.3-0.4-0.7-0.4-1.2
+                                s0.1-0.9,0.4-1.2s0.6-0.5,1.1-0.5c0.4,0,0.8,0.2,1.1,0.5C16.1,1.3,16.3,1.7,16.3,2.2z M13.5,15.7V4.9H16v10.8
+                                C16,15.7,13.5,15.7,13.5,15.7z"/>
+                              <path class="st0" d="M18.1,8.1c0-0.9,0.4-1.7,1.1-2.4c0.7-0.6,1.7-1,2.9-1S24.3,5,25,5.6s1.1,1.5,1.2,2.6h-2.6
+                                c-0.1-0.9-0.6-1.4-1.5-1.4c-0.5,0-0.8,0.1-1.1,0.3c-0.3,0.2-0.4,0.5-0.4,0.9c0,0.4,0.2,0.6,0.6,0.9c0.4,0.2,0.9,0.4,1.4,0.5
+                                c0.6,0.1,1.1,0.3,1.7,0.4c0.6,0.2,1,0.5,1.4,0.9s0.6,1,0.6,1.8c0,1-0.4,1.8-1.1,2.4c-0.8,0.6-1.7,0.9-2.9,0.9s-2.1-0.3-2.9-0.9
+                                s-1.2-1.5-1.2-2.6h2.6c0.1,0.9,0.6,1.4,1.6,1.4c0.5,0,0.8-0.1,1.1-0.3s0.4-0.5,0.4-0.9s-0.2-0.7-0.6-0.9c-0.4-0.2-0.9-0.4-1.4-0.5
+                                c-0.6-0.1-1.1-0.3-1.7-0.4c-0.6-0.2-1-0.5-1.4-0.9C18.3,9.3,18.1,8.8,18.1,8.1z"/>
+                              <path class="st0" d="M30.9,1.3v5.2c0.6-1.2,1.7-1.8,3.1-1.8c1.1,0,2.1,0.4,2.8,1.2s1.1,1.9,1.1,3.4v6.3h-2.5V9.7
+                                c0-0.8-0.2-1.5-0.6-1.9c-0.4-0.4-0.9-0.7-1.6-0.7c-0.7,0-1.2,0.2-1.6,0.7C31.2,8.2,31,8.9,31,9.7v5.9h-2.5V1.3H30.9z"/>
+                              <path class="st0" d="M41.1,14.3c-0.9-1-1.3-2.4-1.3-4s0.4-2.9,1.3-4c0.9-1,2-1.5,3.4-1.5s2.4,0.6,3.1,1.8V4.9H50v10.8h-2.5v-1.8
+                                c-0.8,1.3-1.8,2-3.1,2C43.1,15.8,42,15.3,41.1,14.3z M46.7,12.6c0.5-0.6,0.8-1.3,0.8-2.3S47.2,8.5,46.7,8c-0.5-0.6-1.1-0.8-1.8-0.8
+                                S43.6,7.5,43.1,8c-0.5,0.6-0.8,1.3-0.8,2.3s0.3,1.8,0.8,2.3c0.5,0.6,1.1,0.9,1.8,0.9C45.6,13.5,46.2,13.2,46.7,12.6z"/>
+                              <path class="st0" d="M55.2,4.9v1.6c0.6-1.2,1.7-1.8,3.1-1.8c1.1,0,2.1,0.4,2.8,1.2c0.7,0.8,1.1,1.9,1.1,3.4v6.3h-2.5V9.7
+                                c0-0.8-0.2-1.5-0.6-1.9c-0.4-0.4-0.9-0.7-1.6-0.7s-1.2,0.2-1.6,0.7c-0.4,0.4-0.6,1.1-0.6,1.9v5.9h-2.5V4.9H55.2z"/>
+                              <path class="st0" d="M68.6,13.4h1.2v2.3h-1.6c-1,0-1.8-0.3-2.3-0.8S65,13.6,65,12.4V7.1H64V4.9h1V2.3h2.5V5h2.2v2.2h-2.2v5.3
+                                c0,0.3,0.1,0.6,0.2,0.7C67.9,13.3,68.2,13.4,68.6,13.4z"/>
+                              <path class="st0" d="M85.2,8.9c-0.3,0.4-0.8,0.8-1.4,1c-0.6,0.3-1.3,0.4-2.2,0.4h-2.1v5.4H77V2.1h4.6c1.4,0,2.6,0.4,3.3,1.2
+                                c0.8,0.8,1.2,1.7,1.2,2.8C86.2,7.1,85.9,8.1,85.2,8.9z M79.6,8.2h2.1c0.6,0,1.1-0.2,1.4-0.5c0.3-0.4,0.5-0.8,0.5-1.4
+                                s-0.2-1.1-0.5-1.4c-0.3-0.4-0.8-0.5-1.4-0.5h-2.1V8.2z"/>
+                              <path class="st0" d="M88.7,14.3c-0.9-1-1.3-2.4-1.3-4s0.4-2.9,1.3-4c0.9-1,2-1.5,3.4-1.5s2.4,0.6,3.1,1.8V4.9h2.5v10.8h-2.5v-1.8
+                                c-0.8,1.3-1.8,2-3.1,2C90.7,15.8,89.6,15.3,88.7,14.3z M94.4,12.6c0.5-0.6,0.8-1.3,0.8-2.3S94.9,8.5,94.4,8
+                                c-0.5-0.6-1.1-0.8-1.8-0.8S91.2,7.5,90.8,8c-0.5,0.6-0.8,1.3-0.8,2.3s0.3,1.8,0.8,2.3c0.5,0.6,1.1,0.9,1.8,0.9S93.9,13.2,94.4,12.6
+                                z"/>
+                              <path class="st0" d="M102.9,4.9v1.6c0.6-1.2,1.7-1.8,3.1-1.8c1.1,0,2.1,0.4,2.8,1.2c0.7,0.8,1.1,1.9,1.1,3.4v6.3h-2.5V9.7
+                                c0-0.8-0.2-1.5-0.6-1.9c-0.4-0.4-0.9-0.7-1.6-0.7s-1.2,0.2-1.6,0.7c-0.4,0.4-0.6,1.1-0.6,1.9v5.9h-2.5V4.9H102.9z"/>
+                              <path class="st0" d="M113,14.3c-0.9-1-1.4-2.4-1.4-4s0.5-3,1.4-4s2.1-1.5,3.5-1.5c1.2,0,2.2,0.3,3,1c0.8,0.6,1.4,1.5,1.6,2.7h-2.7
+                                c-0.3-0.9-1-1.3-1.9-1.3c-0.7,0-1.3,0.3-1.7,0.9s-0.6,1.4-0.6,2.4s0.2,1.8,0.6,2.4c0.4,0.6,1,0.9,1.7,0.9c1,0,1.6-0.5,1.9-1.4h2.7
+                                c-0.3,1.1-0.8,2-1.7,2.7c-0.8,0.7-1.8,1-3,1C115.1,15.8,113.8,15.3,113,14.3z"/>
+                              <path class="st0" d="M125.6,1.3v5.2c0.6-1.2,1.7-1.8,3.1-1.8c1.1,0,2.1,0.4,2.8,1.2s1.1,1.9,1.1,3.4v6.3h-2.6V9.7
+                                c0-0.8-0.2-1.5-0.6-1.9c-0.4-0.4-0.9-0.7-1.6-0.7c-0.7,0-1.2,0.2-1.6,0.7c-0.4,0.4-0.6,1.1-0.6,1.9v5.9H123V1.3H125.6z"/>
+                              <path class="st0" d="M135.6,14.3c-0.9-1-1.3-2.4-1.3-4s0.4-2.9,1.3-4c0.9-1,2-1.5,3.4-1.5s2.4,0.6,3.1,1.8V4.9h2.5v10.8h-2.5v-1.8
+                                c-0.8,1.3-1.8,2-3.1,2C137.6,15.8,136.6,15.3,135.6,14.3z M141.3,12.6c0.5-0.6,0.8-1.3,0.8-2.3s-0.3-1.8-0.8-2.3
+                                c-0.5-0.6-1.1-0.8-1.8-0.8s-1.3,0.3-1.8,0.8c-0.6,0.5-0.8,1.3-0.8,2.3s0.3,1.8,0.8,2.3c0.5,0.6,1.1,0.9,1.8,0.9
+                                S140.8,13.2,141.3,12.6z"/>
+                              <path class="st0" d="M147.3,15.7V1.3h2.5v14.4H147.3z"/>
+                            </g>
+                          </svg>
                         </div>
-                        <script type="text/javascript">UNCODE.initHeader();</script>
-
-                        <article id="post-20528" class="page-body style-color-xsdn-bg post-20528 post type-post status-publish format-standard has-post-thumbnail hentry category-lifestyle category-business tag-music tag-style">
-                           <div class="post-wrapper">
-                              <div class="post-body">
-                                 <div class="post-content" style="max-width: 800px; margin: auto;">
-                                    <div class="row-container">
-                                       <div class="row row-parent style-light double-top-padding double-bottom-padding">
-                                          <p>Many years ago, I worked for my parents who own a video production company. Because it is a family business, you inevitably end up wearing many hats and being the czar of many different jobs. I mainly managed projects and worked as a video editor. On production, there were times that I was called on to work as an audio tech and was made to wear headphones on long production days. In those days, having a really good set of headphones that picked up every nuance of sound was essential to making sure the client got what they needed.</p>
-                                          <h4>First impressions.</h4>
-                                          <p>Naturally, my first impression of these headphones is based off of the look of them. They have a classic over-the-ear style that is highlighted by <strong>a blue LED light</strong> that indicates the power for the noise canceling. The padding on the ear pieces seems adequate for extended usage periods.</p>
-                                          <p>They are wired headphones, but the 3.5mm stereo mini-plug cable is detachable. Something else I noticed right of the bat was the very nice carrying case that comes with them. It has a hard plastic exterior with a soft cloth interior that helps to protect the surface of the headphones from scratches. I never truly appreciated cases for headphones until I started carrying them from place-to-place. Now I can’t imagine not having a case.</p>
-                                          <h4>A perfect fit.</h4>
-                                          <p>Once I gave the headphones a thorough once-over exam, I tried them on. As I mentioned, they have a classic <em>over-the-ear style</em> and just looking at them, the padding on the ear pieces seem adequate and the peak of the headband seemed to be a bit lacking, but you don’t really know comfort unless you try on the product. So, I slipped the headphones on and found them to be exquisitely comfortable.</p>
-                                          <h4>Quality.</h4>
-                                          <p>Now that I had the headphones on my head, I was finally ready to plug and play some music. I plugged the provided cable into the jack on the headphones and then the one on my iPhone 6. Then I called up Pandora. I tend to have a very eclectic music purview and have many stations set up for different moods. From <strong>John Williams</strong> to <strong>Fallout Boy</strong>, the sound quality of these headphones was remarkable. There is an amazing depth of sound and incredible highs and lows that make listening to music a truly breathtaking experience.</p>
-                                          <blockquote>
-                                             <p>It’s safe to say that because of my <strong>unique professional experiences</strong>, I’ve tested out a lot of headphones.</p>
-                                          </blockquote>
-                                          <p>In order to test how voices sounded, and the overall art of sound mixing, I pulled up Netflix on my iPad Air 2 and watched a few minutes of a movie to hear all the nuances of the film. None of them were lost. In fact, I ended up hearing sounds that I hadn’t heard before. Echoes…birds chirping…wind blowing through trees…breathing of the characters…it was very impressive what the headphones ended up bringing out for me.</p>
-                                          <p><em>I would highly recommend these to any sound mixing specialist.</em></p>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="post-footer post-footer-light row-container">
-                                    <div class="row-container">
-                                       <div class="row row-parent style-light no-top-padding no-bottom-padding" style="max-width: 800px; margin: auto;">
-                                          <div class="post-share">
-                                             <div class="detail-container margin-auto">
-                                                <div class="share-button share-buttons share-inline share-bigger"></div>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="row-container row-navigation row-navigation-light">
-                                 <div class="row row-parent style-light limit-width">
-                                    <nav class="post-navigation" role="navigation">
-                                       <ul class="navigation">
-                                          <li class="page-prev"><span class="btn-container"><span class="btn btn-link btn-icon-left btn-disable-hover"><i class="fa fa-angle-left"></i>Prev</span></span></li>
-                                          <li class="page-next"><span class="btn-container"><a class="btn btn-link text-default-color btn-icon-right" href="cssvsjs.html" rel="next"><span>Next</span><i class="fa fa-angle-right"></i></a></span></li>
-                                       </ul>
-                                       <!-- .navigation -->
-                                    </nav>
-                                    <!-- .post-navigation -->
-                                 </div>
-                              </div>
-                           </div>
-                        </article>
-                     </div>
-                     <!-- sections container -->
+                      </a>
+                    </div>
+                    <div class="mmb-container">
+                      <div class="mobile-menu-button mobile-menu-button-light lines-button x2"><span class="lines"></span></div>
+                    </div>
                   </div>
-                  <!-- page wrapper -->
-                  <footer id="colophon" class="site-footer">
-                     
-                     <div class="row-container style-dark-bg footer-last">
-                        <div class="row row-parent style-dark limit-width no-top-padding no-h-padding no-bottom-padding">
-                           <div class="site-info uncell col-lg-6 pos-middle text-left">&copy; 2016 Nishant Panchal - All rights reserved</div>
-                           <!-- site info -->
-                           <div class="uncell col-lg-6 pos-middle text-right">
-                              <div class="social-icon icon-box icon-box-top icon-inline"><a href="http://facebook.com/niscool" target="_blank"><i class="fa fa-social-facebook"></i></a></div>
-                              <div class="social-icon icon-box icon-box-top icon-inline"><a href="http://twitter.com/PanchalNish21" target="_blank"><i class="fa fa-social-twitter"></i></a></div>
-                              <div class="social-icon icon-box icon-box-top icon-inline"><a href="http://www.github.com/NishantPanchal92" target="_blank"><i class="fa fa-github"></i></a></div>
-                              <div class="social-icon icon-box icon-box-top icon-inline"><a href="https://behance.net/nishcool" target="_blank"><i class="fa fa-behance-square"></i></a></div>
-                              <div class="social-icon icon-box icon-box-top icon-inline"><a href="https://www.linkedin.com/in/nishant-panchal-2038a056" target="_blank"><i class="fa fa-social-linkedin"></i></a></div>
-                           </div>
+                  <div class="col-lg-12 main-menu-container middle">
+                    <div class="menu-horizontal">
+                      <div class="menu-horizontal-inner">
+                        <div class="nav navbar-nav navbar-main navbar-nav-first">
+                          <ul id="menu-main-menu" class="menu-primary-inner menu-smart sm">
+                            <li id="menu-item-42967" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-object-custom menu-item-42967"><a title="Home" href="../index.html#home">Home<i class="fa fa-dropdown"></i></a></li>
+                            <li id="menu-item-42968" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-object-custom menu-item-42968"><a title="Amout Me" href="../index.html#about">About Me<i class="fa fa-dropdown"></i></a></li>
+                            <li id="menu-item-42969" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-object-custom menu-item-42969"><a title="Projects" href="../index.html#works">Projects<i class="fa fa-dropdown"></i></a></li>
+                            <li id="menu-item-42969" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-object-custom menu-item-42969"><a title="Resume" href="../index.html#resume">Resume<i class="fa fa-dropdown"></i></a></li>
+                            <li id="menu-item-43666" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-object-custom menu-item-43666"><a title="Blog" href="../index.html#blog">Blogs<i class="fa fa-dropdown"></i></a></li>
+                            <li id="menu-item-42970" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-object-custom menu-item-42970"><a title="Contact Me" href="../index.html#contact">Contact Me<i class="fa fa-dropdown"></i></a></li>
+                          </ul>
                         </div>
-                     </div>
-                  </footer>
-               </div>
-               <!-- main container -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </header>
+          </div>
+          <script type="text/javascript">UNCODE.fixMenuHeight();</script>
+          <div class="main-wrapper">
+            <div class="main-container">
+              <div class="page-wrapper">
+                <div class="sections-container">
+                  <div id="page-header">
+                    <div class="header-basic style-dark">
+                      <div class="background-element header-wrapper header-scroll-opacity header-parallax style-color-wayh-bg header-only-text" data-height="75" style="min-height: 300px;">
+                        <div class="header-bg-wrapper">
+                          <div class="header-bg" style="background-image: url(https://dl.dropboxusercontent.com/s/8o4rly86qtudoet/dubai_2-1440x900.jpg);"></div>
+                          <div class="block-bg-overlay style-color-wayh-bg" style="opacity: 0.65;"></div>
+                        </div>
+                        <div class="header-main-container limit-width">
+                          <div class="header-content header-center header-middle header-align-center">
+                            <div class="header-content-inner" >
+                              <h1 class="header-title font-762333 fontsize-338686 font-weight-700 text-uppercase"><span>Trip to Dubai</span></h1>
+                              <div class="post-info">March 15, 2015<span>|</span>By Nishant Panchal</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="header-scrolldown style-dark"><i class="fa fa-angle-down"></i></div>
+                      </div>
+                    </div>
+                  </div>
+                  <script type="text/javascript">UNCODE.initHeader();</script>
+                  <article id="post-20528" class="page-body style-color-xsdn-bg post-20528 post type-post status-publish format-standard has-post-thumbnail hentry">
+                    <div class="post-wrapper">
+                      <div class="post-body">
+                        <div class="post-content">
+                          <!-- style="max-width: 800px; margin: auto;" -->
+                          <div data-parent="true" class="limit-width row-container" style="max-width: 800px; margin: auto;">
+                            <div class="row row-parent style-light double-top-padding no-bottom-padding">
+                              <h4>First impressions.</h4>
+                              <p>One fine morning while I was having breakfast with my family, my mom came up with the idea (demand rather) of visiting Dubai. The plan sounded pretty exciting but we all weren't very convinced since we had never visited any foreign country before. I started my preliminary search for famous locations that we could visit and found Dubai to be an exciting place. Our family has a tradition of organizing self-planned trips but, this would be our first international trip, because of which we were strongly considering hiring a professional tour organizer. Along with obtaining tour details from various organizers, I did my part of research on visiting Dubai, and felt, I might be able to plan it for myself. Now after smoothly completing the journey, I can say <strong>"Trust me guys, it's doable."</strong></p>
+                              <p>This article comprises of my experience at each point of the journey along with a few handy tips that will enrich your travel to Dubai. I will also be sharing links to various resources that I used to plan my trip.  So let's start!</p>
+                              <h4>Itinerary</h4>
+                              <p>The Itinerary I created is based on the information I obtained from various internet sources. Along the trip I have added necessary details to make it more accurate. It includes various routes that can be opted to reach there, what kind of public transport can be used (metro, bus numbers, etc.), cost and time of travel. You can download the itinerary by clicking the below button.</p>
+                              <div class="pos-top pos-center align_center column_parent half-internal-gutter">
+                                <span class="btn-container">
+                                <a href="../resources/Dubai_Itinerary.pdf" class="btn btn-shadow btn-outline btn-ripple-out btn-border-animated btn-accent btn-icon-fx btn-icon-left" target="_blank"><i class="fa fa-download"></i>Download Itinerary</a>
+                                </span>
+                              </div>
+                              <blockquote>
+                                <p>Note: The information may not be true for current day!</p>
+                              </blockquote>
+                              <h4>Locations I covered.</h4>
+                              <p>
+                              <div class="uncode-wrapper uncode-list">
+                                <ul class="text-large icons">
+                                  <li><i class="fa fa-arrow-right-thick"></i>Desert Safari</li>
+                                  <li><i class="fa fa-arrow-right-thick"></i>Dolphin Show</li>
+                                  <li><i class="fa fa-arrow-right-thick"></i>Jumeirah Beach</li>
+                                  <li><i class="fa fa-arrow-right-thick"></i>Dubai Mall and Fountain Show</li>
+                                  <li><i class="fa fa-arrow-right-thick"></i>Burj Khalifa</li>
+                                  <li><i class="fa fa-arrow-right-thick"></i>Ferrari World</li>
+                                  <li><i class="fa fa-arrow-right-thick"></i>Abu Dhabi Mosque</li>
+                                  <li><i class="fa fa-arrow-right-thick"></i>Gold & Spice Souk</li>
+                                  <li><i class="fa fa-arrow-right-thick"></i>Miracle Gardenv</li>
+                                  <li><i class="fa fa-arrow-right-thick"></i>Dubai Marina</li>
+                                  <li><i class="fa fa-arrow-right-thick"></i>Aquaventure Water Park, Atlantis</li>
+                                </ul>
+                              </div>
+                              </p>
+                            </div>
+                          </div>
+                          <!-- Google Map -->
+                          <div data-parent="true" class="row-container">
+                            <div class="row no-top-padding no-bottom-padding no-h-padding full-width row-parent" data-height-ratio="50" data-imgready="true">
+                              <div class="row-inner" style="height: 243px;">
+                                <div class="pos-top pos-left align_left column_parent col-lg-12 single-internal-gutter">
+                                  <div class="uncol style-light unexpand">
+                                    <div class="uncoltable">
+                                      <div class="uncell no-block-padding">
+                                        <div class="uncont">
+                                          <div class="uncode-gmaps-widget  uncode-map-responsive">
+                                            <div class="uncode-wrapper">
+                                              <div id="gmapcJXxbH" class="uncode-map-wrapper" data-zoom="20" data-color="#eaeaea" data-ui="#0cb4ce" data-lat="25.276987" data-lon="55.296249" data-saturation="-80" data-brightness="5" style="position: relative; overflow: hidden; transform: translateZ(0px); background-color: rgb(229, 227, 223);">
+                                                <div style="position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%; z-index: 0;" class="gm-style">
+                                                  <div style="position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%; z-index: 0; cursor: url(&quot;http://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;) 8 8, default;">
+                                                    <div style="position: absolute; left: 0px; top: 0px; z-index: 1; width: 100%; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 0, 0);">
+                                                      <div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 100; width: 100%;">
+                                                        <div style="position: absolute; left: 0px; top: 0px; z-index: 0;">
+                                                          <div aria-hidden="true" style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;">
+                                                            <div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 696px; top: -148px;"></div>
+                                                            <div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 440px; top: -148px;"></div>
+                                                            <div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 440px; top: 108px;"></div>
+                                                            <div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 696px; top: 108px;"></div>
+                                                            <div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 184px; top: -148px;"></div>
+                                                            <div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 184px; top: 108px;"></div>
+                                                            <div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 952px; top: -148px;"></div>
+                                                            <div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 952px; top: 108px;"></div>
+                                                            <div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: -72px; top: 108px;"></div>
+                                                            <div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: -72px; top: -148px;"></div>
+                                                            <div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 1208px; top: -148px;"></div>
+                                                            <div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 1208px; top: 108px;"></div>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                      <div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 101; width: 100%;"></div>
+                                                      <div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 102; width: 100%;"></div>
+                                                      <div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 103; width: 100%;">
+                                                        <div style="position: absolute; left: 0px; top: 0px; z-index: -1;">
+                                                          <div aria-hidden="true" style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;">
+                                                            <div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 696px; top: -148px;"></div>
+                                                            <div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 440px; top: -148px;"></div>
+                                                            <div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 440px; top: 108px;"></div>
+                                                            <div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 696px; top: 108px;"></div>
+                                                            <div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 184px; top: -148px;"></div>
+                                                            <div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 184px; top: 108px;"></div>
+                                                            <div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 952px; top: -148px;"></div>
+                                                            <div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 952px; top: 108px;"></div>
+                                                            <div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: -72px; top: 108px;"></div>
+                                                            <div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: -72px; top: -148px;"></div>
+                                                            <div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 1208px; top: -148px;"></div>
+                                                            <div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 1208px; top: 108px;"></div>
+                                                          </div>
+                                                        </div>
+                                                        <div style="width: 32px; height: 48px; position: absolute; left: 704px; top: 74px; z-index: 121;">
+                                                          <canvas width="32" height="48" draggable="false" style="width: 32px; height: 48px; position: absolute; left: 0px; top: 0px; -webkit-user-select: none;"></canvas>
+                                                        </div>
+                                                      </div>
+                                                      <div style="position: absolute; left: 0px; top: 0px; z-index: 0;">
+                                                        <div aria-hidden="true" style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;">
+                                                          <div style="transform: translateZ(0px); position: absolute; left: -72px; top: -148px; transition: opacity 200ms ease-out;"><img src="http://mt0.googleapis.com/maps/vt?pb=!1m5!1m4!1i13!2i4090!3i2723!4i256!2m3!1e0!2sm!3i333218219!3m14!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcy5lOmx8cC5zOi04MCxzLnQ6MnxzLmU6bHxwLnY6b2ZmLHMudDozfHMuZTpsLml8cC52Om9mZixzLnQ6NDl8cy5lOmx8cC52Om9mZixzLnQ6NTF8cy5lOmwuaXxwLnY6b2ZmLHMudDo1MHxzLmU6bC5pfHAudjpvZmYscy50OjN8cy5lOmcuc3xwLnY6b2ZmLHMudDo0fHMuZTpnLmZ8cC5oOiNlYWVhZWF8cC52Om9mZnxwLmw6NXxwLnM6LTgwLHMudDoyfHMuZTpnLmZ8cC5oOiNlYWVhZWF8cC52Om9mZnxwLmw6NXxwLnM6LTgwLHMudDozNHxzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvZmZ8cC5sOjV8cC5zOi04MCxzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvZmZ8cC5sOjV8cC5zOi04MCxzLnQ6Mzd8cy5lOmcuZnxwLmg6I2VhZWFlYXxwLnY6b2ZmfHAubDo1fHAuczotODAscy50OjMzfHMuZTpnLmZ8cC5oOiNlYWVhZWF8cC52Om9mZnxwLmw6NXxwLnM6LTgwLHMudDo0fHMuZTpnLmZ8cC5oOiNlYWVhZWF8cC52Om9mZnxwLmw6NXxwLnM6LTgwLHMudDo2NnxzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvZmZ8cC5sOjV8cC5zOi04MCxzLnQ6NjZ8cC52Om9mZixzLnQ6NXxwLmg6I2VhZWFlYXxwLnY6b258cC5sOjV8cC5zOi04MCxzLnQ6M3xzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvbnxwLmw6NXxwLnM6LTgwLHMudDo0OXxzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvbnxwLmw6MTAwfHAuczotODAscy50OjY1fHMuZTpsfHAudjpvZmYscy50OjZ8cy5lOmd8cC5oOiNlYWVhZWF8cC52Om9ufHAubDo1fHAuczotODA!4e0&amp;token=85620" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div>
+                                                          <div style="transform: translateZ(0px); position: absolute; left: -72px; top: 108px; transition: opacity 200ms ease-out;"><img src="http://mt0.googleapis.com/maps/vt?pb=!1m5!1m4!1i13!2i4090!3i2724!4i256!2m3!1e0!2sm!3i333218219!3m14!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcy5lOmx8cC5zOi04MCxzLnQ6MnxzLmU6bHxwLnY6b2ZmLHMudDozfHMuZTpsLml8cC52Om9mZixzLnQ6NDl8cy5lOmx8cC52Om9mZixzLnQ6NTF8cy5lOmwuaXxwLnY6b2ZmLHMudDo1MHxzLmU6bC5pfHAudjpvZmYscy50OjN8cy5lOmcuc3xwLnY6b2ZmLHMudDo0fHMuZTpnLmZ8cC5oOiNlYWVhZWF8cC52Om9mZnxwLmw6NXxwLnM6LTgwLHMudDoyfHMuZTpnLmZ8cC5oOiNlYWVhZWF8cC52Om9mZnxwLmw6NXxwLnM6LTgwLHMudDozNHxzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvZmZ8cC5sOjV8cC5zOi04MCxzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvZmZ8cC5sOjV8cC5zOi04MCxzLnQ6Mzd8cy5lOmcuZnxwLmg6I2VhZWFlYXxwLnY6b2ZmfHAubDo1fHAuczotODAscy50OjMzfHMuZTpnLmZ8cC5oOiNlYWVhZWF8cC52Om9mZnxwLmw6NXxwLnM6LTgwLHMudDo0fHMuZTpnLmZ8cC5oOiNlYWVhZWF8cC52Om9mZnxwLmw6NXxwLnM6LTgwLHMudDo2NnxzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvZmZ8cC5sOjV8cC5zOi04MCxzLnQ6NjZ8cC52Om9mZixzLnQ6NXxwLmg6I2VhZWFlYXxwLnY6b258cC5sOjV8cC5zOi04MCxzLnQ6M3xzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvbnxwLmw6NXxwLnM6LTgwLHMudDo0OXxzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvbnxwLmw6MTAwfHAuczotODAscy50OjY1fHMuZTpsfHAudjpvZmYscy50OjZ8cy5lOmd8cC5oOiNlYWVhZWF8cC52Om9ufHAubDo1fHAuczotODA!4e0&amp;token=33195" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div>
+                                                          <div style="transform: translateZ(0px); position: absolute; left: 696px; top: 108px; transition: opacity 200ms ease-out;"><img src="http://mt1.googleapis.com/maps/vt?pb=!1m5!1m4!1i13!2i4093!3i2724!4i256!2m3!1e0!2sm!3i333218939!3m14!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcy5lOmx8cC5zOi04MCxzLnQ6MnxzLmU6bHxwLnY6b2ZmLHMudDozfHMuZTpsLml8cC52Om9mZixzLnQ6NDl8cy5lOmx8cC52Om9mZixzLnQ6NTF8cy5lOmwuaXxwLnY6b2ZmLHMudDo1MHxzLmU6bC5pfHAudjpvZmYscy50OjN8cy5lOmcuc3xwLnY6b2ZmLHMudDo0fHMuZTpnLmZ8cC5oOiNlYWVhZWF8cC52Om9mZnxwLmw6NXxwLnM6LTgwLHMudDoyfHMuZTpnLmZ8cC5oOiNlYWVhZWF8cC52Om9mZnxwLmw6NXxwLnM6LTgwLHMudDozNHxzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvZmZ8cC5sOjV8cC5zOi04MCxzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvZmZ8cC5sOjV8cC5zOi04MCxzLnQ6Mzd8cy5lOmcuZnxwLmg6I2VhZWFlYXxwLnY6b2ZmfHAubDo1fHAuczotODAscy50OjMzfHMuZTpnLmZ8cC5oOiNlYWVhZWF8cC52Om9mZnxwLmw6NXxwLnM6LTgwLHMudDo0fHMuZTpnLmZ8cC5oOiNlYWVhZWF8cC52Om9mZnxwLmw6NXxwLnM6LTgwLHMudDo2NnxzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvZmZ8cC5sOjV8cC5zOi04MCxzLnQ6NjZ8cC52Om9mZixzLnQ6NXxwLmg6I2VhZWFlYXxwLnY6b258cC5sOjV8cC5zOi04MCxzLnQ6M3xzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvbnxwLmw6NXxwLnM6LTgwLHMudDo0OXxzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvbnxwLmw6MTAwfHAuczotODAscy50OjY1fHMuZTpsfHAudjpvZmYscy50OjZ8cy5lOmd8cC5oOiNlYWVhZWF8cC52Om9ufHAubDo1fHAuczotODA!4e0&amp;token=39879" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div>
+                                                          <div style="transform: translateZ(0px); position: absolute; left: 440px; top: -148px; transition: opacity 200ms ease-out;"><img src="http://mt0.googleapis.com/maps/vt?pb=!1m5!1m4!1i13!2i4092!3i2723!4i256!2m3!1e0!2sm!3i333218219!3m14!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcy5lOmx8cC5zOi04MCxzLnQ6MnxzLmU6bHxwLnY6b2ZmLHMudDozfHMuZTpsLml8cC52Om9mZixzLnQ6NDl8cy5lOmx8cC52Om9mZixzLnQ6NTF8cy5lOmwuaXxwLnY6b2ZmLHMudDo1MHxzLmU6bC5pfHAudjpvZmYscy50OjN8cy5lOmcuc3xwLnY6b2ZmLHMudDo0fHMuZTpnLmZ8cC5oOiNlYWVhZWF8cC52Om9mZnxwLmw6NXxwLnM6LTgwLHMudDoyfHMuZTpnLmZ8cC5oOiNlYWVhZWF8cC52Om9mZnxwLmw6NXxwLnM6LTgwLHMudDozNHxzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvZmZ8cC5sOjV8cC5zOi04MCxzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvZmZ8cC5sOjV8cC5zOi04MCxzLnQ6Mzd8cy5lOmcuZnxwLmg6I2VhZWFlYXxwLnY6b2ZmfHAubDo1fHAuczotODAscy50OjMzfHMuZTpnLmZ8cC5oOiNlYWVhZWF8cC52Om9mZnxwLmw6NXxwLnM6LTgwLHMudDo0fHMuZTpnLmZ8cC5oOiNlYWVhZWF8cC52Om9mZnxwLmw6NXxwLnM6LTgwLHMudDo2NnxzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvZmZ8cC5sOjV8cC5zOi04MCxzLnQ6NjZ8cC52Om9mZixzLnQ6NXxwLmg6I2VhZWFlYXxwLnY6b258cC5sOjV8cC5zOi04MCxzLnQ6M3xzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvbnxwLmw6NXxwLnM6LTgwLHMudDo0OXxzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvbnxwLmw6MTAwfHAuczotODAscy50OjY1fHMuZTpsfHAudjpvZmYscy50OjZ8cy5lOmd8cC5oOiNlYWVhZWF8cC52Om9ufHAubDo1fHAuczotODA!4e0&amp;token=114190" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div>
+                                                          <div style="transform: translateZ(0px); position: absolute; left: 1208px; top: -148px; transition: opacity 200ms ease-out;"><img src="http://mt1.googleapis.com/maps/vt?pb=!1m5!1m4!1i13!2i4095!3i2723!4i256!2m3!1e0!2sm!3i333218939!3m14!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcy5lOmx8cC5zOi04MCxzLnQ6MnxzLmU6bHxwLnY6b2ZmLHMudDozfHMuZTpsLml8cC52Om9mZixzLnQ6NDl8cy5lOmx8cC52Om9mZixzLnQ6NTF8cy5lOmwuaXxwLnY6b2ZmLHMudDo1MHxzLmU6bC5pfHAudjpvZmYscy50OjN8cy5lOmcuc3xwLnY6b2ZmLHMudDo0fHMuZTpnLmZ8cC5oOiNlYWVhZWF8cC52Om9mZnxwLmw6NXxwLnM6LTgwLHMudDoyfHMuZTpnLmZ8cC5oOiNlYWVhZWF8cC52Om9mZnxwLmw6NXxwLnM6LTgwLHMudDozNHxzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvZmZ8cC5sOjV8cC5zOi04MCxzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvZmZ8cC5sOjV8cC5zOi04MCxzLnQ6Mzd8cy5lOmcuZnxwLmg6I2VhZWFlYXxwLnY6b2ZmfHAubDo1fHAuczotODAscy50OjMzfHMuZTpnLmZ8cC5oOiNlYWVhZWF8cC52Om9mZnxwLmw6NXxwLnM6LTgwLHMudDo0fHMuZTpnLmZ8cC5oOiNlYWVhZWF8cC52Om9mZnxwLmw6NXxwLnM6LTgwLHMudDo2NnxzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvZmZ8cC5sOjV8cC5zOi04MCxzLnQ6NjZ8cC52Om9mZixzLnQ6NXxwLmg6I2VhZWFlYXxwLnY6b258cC5sOjV8cC5zOi04MCxzLnQ6M3xzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvbnxwLmw6NXxwLnM6LTgwLHMudDo0OXxzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvbnxwLmw6MTAwfHAuczotODAscy50OjY1fHMuZTpsfHAudjpvZmYscy50OjZ8cy5lOmd8cC5oOiNlYWVhZWF8cC52Om9ufHAubDo1fHAuczotODA!4e0&amp;token=120874" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div>
+                                                          <div style="transform: translateZ(0px); position: absolute; left: 696px; top: -148px; transition: opacity 200ms ease-out;"><img src="http://mt1.googleapis.com/maps/vt?pb=!1m5!1m4!1i13!2i4093!3i2723!4i256!2m3!1e0!2sm!3i333218939!3m14!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcy5lOmx8cC5zOi04MCxzLnQ6MnxzLmU6bHxwLnY6b2ZmLHMudDozfHMuZTpsLml8cC52Om9mZixzLnQ6NDl8cy5lOmx8cC52Om9mZixzLnQ6NTF8cy5lOmwuaXxwLnY6b2ZmLHMudDo1MHxzLmU6bC5pfHAudjpvZmYscy50OjN8cy5lOmcuc3xwLnY6b2ZmLHMudDo0fHMuZTpnLmZ8cC5oOiNlYWVhZWF8cC52Om9mZnxwLmw6NXxwLnM6LTgwLHMudDoyfHMuZTpnLmZ8cC5oOiNlYWVhZWF8cC52Om9mZnxwLmw6NXxwLnM6LTgwLHMudDozNHxzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvZmZ8cC5sOjV8cC5zOi04MCxzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvZmZ8cC5sOjV8cC5zOi04MCxzLnQ6Mzd8cy5lOmcuZnxwLmg6I2VhZWFlYXxwLnY6b2ZmfHAubDo1fHAuczotODAscy50OjMzfHMuZTpnLmZ8cC5oOiNlYWVhZWF8cC52Om9mZnxwLmw6NXxwLnM6LTgwLHMudDo0fHMuZTpnLmZ8cC5oOiNlYWVhZWF8cC52Om9mZnxwLmw6NXxwLnM6LTgwLHMudDo2NnxzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvZmZ8cC5sOjV8cC5zOi04MCxzLnQ6NjZ8cC52Om9mZixzLnQ6NXxwLmg6I2VhZWFlYXxwLnY6b258cC5sOjV8cC5zOi04MCxzLnQ6M3xzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvbnxwLmw6NXxwLnM6LTgwLHMudDo0OXxzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvbnxwLmw6MTAwfHAuczotODAscy50OjY1fHMuZTpsfHAudjpvZmYscy50OjZ8cy5lOmd8cC5oOiNlYWVhZWF8cC52Om9ufHAubDo1fHAuczotODA!4e0&amp;token=92304" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div>
+                                                          <div style="transform: translateZ(0px); position: absolute; left: 184px; top: -148px; transition: opacity 200ms ease-out;"><img src="http://mt1.googleapis.com/maps/vt?pb=!1m5!1m4!1i13!2i4091!3i2723!4i256!2m3!1e0!2sm!3i333218219!3m14!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcy5lOmx8cC5zOi04MCxzLnQ6MnxzLmU6bHxwLnY6b2ZmLHMudDozfHMuZTpsLml8cC52Om9mZixzLnQ6NDl8cy5lOmx8cC52Om9mZixzLnQ6NTF8cy5lOmwuaXxwLnY6b2ZmLHMudDo1MHxzLmU6bC5pfHAudjpvZmYscy50OjN8cy5lOmcuc3xwLnY6b2ZmLHMudDo0fHMuZTpnLmZ8cC5oOiNlYWVhZWF8cC52Om9mZnxwLmw6NXxwLnM6LTgwLHMudDoyfHMuZTpnLmZ8cC5oOiNlYWVhZWF8cC52Om9mZnxwLmw6NXxwLnM6LTgwLHMudDozNHxzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvZmZ8cC5sOjV8cC5zOi04MCxzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvZmZ8cC5sOjV8cC5zOi04MCxzLnQ6Mzd8cy5lOmcuZnxwLmg6I2VhZWFlYXxwLnY6b2ZmfHAubDo1fHAuczotODAscy50OjMzfHMuZTpnLmZ8cC5oOiNlYWVhZWF8cC52Om9mZnxwLmw6NXxwLnM6LTgwLHMudDo0fHMuZTpnLmZ8cC5oOiNlYWVhZWF8cC52Om9mZnxwLmw6NXxwLnM6LTgwLHMudDo2NnxzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvZmZ8cC5sOjV8cC5zOi04MCxzLnQ6NjZ8cC52Om9mZixzLnQ6NXxwLmg6I2VhZWFlYXxwLnY6b258cC5sOjV8cC5zOi04MCxzLnQ6M3xzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvbnxwLmw6NXxwLnM6LTgwLHMudDo0OXxzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvbnxwLmw6MTAwfHAuczotODAscy50OjY1fHMuZTpsfHAudjpvZmYscy50OjZ8cy5lOmd8cC5oOiNlYWVhZWF8cC52Om9ufHAubDo1fHAuczotODA!4e0&amp;token=99905" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div>
+                                                          <div style="transform: translateZ(0px); position: absolute; left: 952px; top: 108px; transition: opacity 200ms ease-out;"><img src="http://mt0.googleapis.com/maps/vt?pb=!1m5!1m4!1i13!2i4094!3i2724!4i256!2m3!1e0!2sm!3i333218939!3m14!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcy5lOmx8cC5zOi04MCxzLnQ6MnxzLmU6bHxwLnY6b2ZmLHMudDozfHMuZTpsLml8cC52Om9mZixzLnQ6NDl8cy5lOmx8cC52Om9mZixzLnQ6NTF8cy5lOmwuaXxwLnY6b2ZmLHMudDo1MHxzLmU6bC5pfHAudjpvZmYscy50OjN8cy5lOmcuc3xwLnY6b2ZmLHMudDo0fHMuZTpnLmZ8cC5oOiNlYWVhZWF8cC52Om9mZnxwLmw6NXxwLnM6LTgwLHMudDoyfHMuZTpnLmZ8cC5oOiNlYWVhZWF8cC52Om9mZnxwLmw6NXxwLnM6LTgwLHMudDozNHxzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvZmZ8cC5sOjV8cC5zOi04MCxzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvZmZ8cC5sOjV8cC5zOi04MCxzLnQ6Mzd8cy5lOmcuZnxwLmg6I2VhZWFlYXxwLnY6b2ZmfHAubDo1fHAuczotODAscy50OjMzfHMuZTpnLmZ8cC5oOiNlYWVhZWF8cC52Om9mZnxwLmw6NXxwLnM6LTgwLHMudDo0fHMuZTpnLmZ8cC5oOiNlYWVhZWF8cC52Om9mZnxwLmw6NXxwLnM6LTgwLHMudDo2NnxzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvZmZ8cC5sOjV8cC5zOi04MCxzLnQ6NjZ8cC52Om9mZixzLnQ6NXxwLmg6I2VhZWFlYXxwLnY6b258cC5sOjV8cC5zOi04MCxzLnQ6M3xzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvbnxwLmw6NXxwLnM6LTgwLHMudDo0OXxzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvbnxwLmw6MTAwfHAuczotODAscy50OjY1fHMuZTpsfHAudjpvZmYscy50OjZ8cy5lOmd8cC5oOiNlYWVhZWF8cC52Om9ufHAubDo1fHAuczotODA!4e0&amp;token=54164" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div>
+                                                          <div style="transform: translateZ(0px); position: absolute; left: 952px; top: -148px; transition: opacity 200ms ease-out;"><img src="http://mt0.googleapis.com/maps/vt?pb=!1m5!1m4!1i13!2i4094!3i2723!4i256!2m3!1e0!2sm!3i333218939!3m14!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcy5lOmx8cC5zOi04MCxzLnQ6MnxzLmU6bHxwLnY6b2ZmLHMudDozfHMuZTpsLml8cC52Om9mZixzLnQ6NDl8cy5lOmx8cC52Om9mZixzLnQ6NTF8cy5lOmwuaXxwLnY6b2ZmLHMudDo1MHxzLmU6bC5pfHAudjpvZmYscy50OjN8cy5lOmcuc3xwLnY6b2ZmLHMudDo0fHMuZTpnLmZ8cC5oOiNlYWVhZWF8cC52Om9mZnxwLmw6NXxwLnM6LTgwLHMudDoyfHMuZTpnLmZ8cC5oOiNlYWVhZWF8cC52Om9mZnxwLmw6NXxwLnM6LTgwLHMudDozNHxzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvZmZ8cC5sOjV8cC5zOi04MCxzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvZmZ8cC5sOjV8cC5zOi04MCxzLnQ6Mzd8cy5lOmcuZnxwLmg6I2VhZWFlYXxwLnY6b2ZmfHAubDo1fHAuczotODAscy50OjMzfHMuZTpnLmZ8cC5oOiNlYWVhZWF8cC52Om9mZnxwLmw6NXxwLnM6LTgwLHMudDo0fHMuZTpnLmZ8cC5oOiNlYWVhZWF8cC52Om9mZnxwLmw6NXxwLnM6LTgwLHMudDo2NnxzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvZmZ8cC5sOjV8cC5zOi04MCxzLnQ6NjZ8cC52Om9mZixzLnQ6NXxwLmg6I2VhZWFlYXxwLnY6b258cC5sOjV8cC5zOi04MCxzLnQ6M3xzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvbnxwLmw6NXxwLnM6LTgwLHMudDo0OXxzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvbnxwLmw6MTAwfHAuczotODAscy50OjY1fHMuZTpsfHAudjpvZmYscy50OjZ8cy5lOmd8cC5oOiNlYWVhZWF8cC52Om9ufHAubDo1fHAuczotODA!4e0&amp;token=106589" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div>
+                                                          <div style="transform: translateZ(0px); position: absolute; left: 184px; top: 108px; transition: opacity 200ms ease-out;"><img src="http://mt1.googleapis.com/maps/vt?pb=!1m5!1m4!1i13!2i4091!3i2724!4i256!2m3!1e0!2sm!3i333218219!3m14!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcy5lOmx8cC5zOi04MCxzLnQ6MnxzLmU6bHxwLnY6b2ZmLHMudDozfHMuZTpsLml8cC52Om9mZixzLnQ6NDl8cy5lOmx8cC52Om9mZixzLnQ6NTF8cy5lOmwuaXxwLnY6b2ZmLHMudDo1MHxzLmU6bC5pfHAudjpvZmYscy50OjN8cy5lOmcuc3xwLnY6b2ZmLHMudDo0fHMuZTpnLmZ8cC5oOiNlYWVhZWF8cC52Om9mZnxwLmw6NXxwLnM6LTgwLHMudDoyfHMuZTpnLmZ8cC5oOiNlYWVhZWF8cC52Om9mZnxwLmw6NXxwLnM6LTgwLHMudDozNHxzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvZmZ8cC5sOjV8cC5zOi04MCxzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvZmZ8cC5sOjV8cC5zOi04MCxzLnQ6Mzd8cy5lOmcuZnxwLmg6I2VhZWFlYXxwLnY6b2ZmfHAubDo1fHAuczotODAscy50OjMzfHMuZTpnLmZ8cC5oOiNlYWVhZWF8cC52Om9mZnxwLmw6NXxwLnM6LTgwLHMudDo0fHMuZTpnLmZ8cC5oOiNlYWVhZWF8cC52Om9mZnxwLmw6NXxwLnM6LTgwLHMudDo2NnxzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvZmZ8cC5sOjV8cC5zOi04MCxzLnQ6NjZ8cC52Om9mZixzLnQ6NXxwLmg6I2VhZWFlYXxwLnY6b258cC5sOjV8cC5zOi04MCxzLnQ6M3xzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvbnxwLmw6NXxwLnM6LTgwLHMudDo0OXxzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvbnxwLmw6MTAwfHAuczotODAscy50OjY1fHMuZTpsfHAudjpvZmYscy50OjZ8cy5lOmd8cC5oOiNlYWVhZWF8cC52Om9ufHAubDo1fHAuczotODA!4e0&amp;token=47480" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div>
+                                                          <div style="transform: translateZ(0px); position: absolute; left: 440px; top: 108px; transition: opacity 200ms ease-out;"><img src="http://mt0.googleapis.com/maps/vt?pb=!1m5!1m4!1i13!2i4092!3i2724!4i256!2m3!1e0!2sm!3i333218219!3m14!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcy5lOmx8cC5zOi04MCxzLnQ6MnxzLmU6bHxwLnY6b2ZmLHMudDozfHMuZTpsLml8cC52Om9mZixzLnQ6NDl8cy5lOmx8cC52Om9mZixzLnQ6NTF8cy5lOmwuaXxwLnY6b2ZmLHMudDo1MHxzLmU6bC5pfHAudjpvZmYscy50OjN8cy5lOmcuc3xwLnY6b2ZmLHMudDo0fHMuZTpnLmZ8cC5oOiNlYWVhZWF8cC52Om9mZnxwLmw6NXxwLnM6LTgwLHMudDoyfHMuZTpnLmZ8cC5oOiNlYWVhZWF8cC52Om9mZnxwLmw6NXxwLnM6LTgwLHMudDozNHxzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvZmZ8cC5sOjV8cC5zOi04MCxzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvZmZ8cC5sOjV8cC5zOi04MCxzLnQ6Mzd8cy5lOmcuZnxwLmg6I2VhZWFlYXxwLnY6b2ZmfHAubDo1fHAuczotODAscy50OjMzfHMuZTpnLmZ8cC5oOiNlYWVhZWF8cC52Om9mZnxwLmw6NXxwLnM6LTgwLHMudDo0fHMuZTpnLmZ8cC5oOiNlYWVhZWF8cC52Om9mZnxwLmw6NXxwLnM6LTgwLHMudDo2NnxzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvZmZ8cC5sOjV8cC5zOi04MCxzLnQ6NjZ8cC52Om9mZixzLnQ6NXxwLmg6I2VhZWFlYXxwLnY6b258cC5sOjV8cC5zOi04MCxzLnQ6M3xzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvbnxwLmw6NXxwLnM6LTgwLHMudDo0OXxzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvbnxwLmw6MTAwfHAuczotODAscy50OjY1fHMuZTpsfHAudjpvZmYscy50OjZ8cy5lOmd8cC5oOiNlYWVhZWF8cC52Om9ufHAubDo1fHAuczotODA!4e0&amp;token=61765" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div>
+                                                          <div style="transform: translateZ(0px); position: absolute; left: 1208px; top: 108px; transition: opacity 200ms ease-out;"><img src="http://mt1.googleapis.com/maps/vt?pb=!1m5!1m4!1i13!2i4095!3i2724!4i256!2m3!1e0!2sm!3i333218939!3m14!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcy5lOmx8cC5zOi04MCxzLnQ6MnxzLmU6bHxwLnY6b2ZmLHMudDozfHMuZTpsLml8cC52Om9mZixzLnQ6NDl8cy5lOmx8cC52Om9mZixzLnQ6NTF8cy5lOmwuaXxwLnY6b2ZmLHMudDo1MHxzLmU6bC5pfHAudjpvZmYscy50OjN8cy5lOmcuc3xwLnY6b2ZmLHMudDo0fHMuZTpnLmZ8cC5oOiNlYWVhZWF8cC52Om9mZnxwLmw6NXxwLnM6LTgwLHMudDoyfHMuZTpnLmZ8cC5oOiNlYWVhZWF8cC52Om9mZnxwLmw6NXxwLnM6LTgwLHMudDozNHxzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvZmZ8cC5sOjV8cC5zOi04MCxzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvZmZ8cC5sOjV8cC5zOi04MCxzLnQ6Mzd8cy5lOmcuZnxwLmg6I2VhZWFlYXxwLnY6b2ZmfHAubDo1fHAuczotODAscy50OjMzfHMuZTpnLmZ8cC5oOiNlYWVhZWF8cC52Om9mZnxwLmw6NXxwLnM6LTgwLHMudDo0fHMuZTpnLmZ8cC5oOiNlYWVhZWF8cC52Om9mZnxwLmw6NXxwLnM6LTgwLHMudDo2NnxzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvZmZ8cC5sOjV8cC5zOi04MCxzLnQ6NjZ8cC52Om9mZixzLnQ6NXxwLmg6I2VhZWFlYXxwLnY6b258cC5sOjV8cC5zOi04MCxzLnQ6M3xzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvbnxwLmw6NXxwLnM6LTgwLHMudDo0OXxzLmU6Zy5mfHAuaDojZWFlYWVhfHAudjpvbnxwLmw6MTAwfHAuczotODAscy50OjY1fHMuZTpsfHAudjpvZmYscy50OjZ8cy5lOmd8cC5oOiNlYWVhZWF8cC52Om9ufHAubDo1fHAuczotODA!4e0&amp;token=68449" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                    <div style="position: absolute; left: 0px; top: 0px; z-index: 2; width: 100%; height: 100%;"></div>
+                                                    <div style="position: absolute; left: 0px; top: 0px; z-index: 3; width: 100%; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 0, 0);">
+                                                      <div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 104; width: 100%;"></div>
+                                                      <div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 105; width: 100%;"></div>
+                                                      <div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 106; width: 100%;">
+                                                        <div class="gmnoprint" title="spot" style="width: 32px; height: 48px; overflow: hidden; position: absolute; opacity: 0.01; cursor: pointer; left: 704px; top: 74px; z-index: 121;"><img src="http://maps.gstatic.com/mapfiles/transparent.png" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 32px; height: 48px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div>
+                                                      </div>
+                                                      <div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 107; width: 100%;"></div>
+                                                    </div>
+                                                  </div>
+                                                  <div style="padding: 15px 21px; border: 1px solid rgb(171, 171, 171); font-family: Roboto, Arial, sans-serif; color: rgb(34, 34, 34); box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 16px; z-index: 10000002; display: none; width: 256px; height: 148px; position: absolute; left: 570px; top: 32px; background-color: white;">
+                                                    <div style="padding: 0px 0px 10px; font-size: 16px;">Map Data</div>
+                                                    <div style="font-size: 13px;">Map data ©2016 Google</div>
+                                                    <div style="width: 13px; height: 13px; overflow: hidden; position: absolute; opacity: 0.7; right: 12px; top: 12px; z-index: 10000; cursor: pointer;"><img src="http://maps.gstatic.com/mapfiles/api-3/images/mapcnt6.png" draggable="false" style="position: absolute; left: -2px; top: -336px; width: 59px; height: 492px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div>
+                                                  </div>
+                                                  <div class="gmnoprint" style="z-index: 1000001; position: absolute; right: 167px; bottom: 0px; width: 121px;">
+                                                    <div draggable="false" class="gm-style-cc" style="-webkit-user-select: none; height: 14px; line-height: 14px;">
+                                                      <div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;">
+                                                        <div style="width: 1px;"></div>
+                                                        <div style="width: auto; height: 100%; margin-left: 1px; background-color: rgb(245, 245, 245);"></div>
+                                                      </div>
+                                                      <div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a style="color: rgb(68, 68, 68); text-decoration: none; cursor: pointer; display: none;">Map Data</a><span>Map data ©2016 Google</span></div>
+                                                    </div>
+                                                  </div>
+                                                  <div class="gmnoscreen" style="position: absolute; right: 0px; bottom: 0px;">
+                                                    <div style="font-family: Roboto, Arial, sans-serif; font-size: 11px; color: rgb(68, 68, 68); direction: ltr; text-align: right; background-color: rgb(245, 245, 245);">Map data ©2016 Google</div>
+                                                  </div>
+                                                  <div class="gmnoprint gm-style-cc" draggable="false" style="z-index: 1000001; -webkit-user-select: none; height: 14px; line-height: 14px; position: absolute; right: 95px; bottom: 0px;">
+                                                    <div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;">
+                                                      <div style="width: 1px;"></div>
+                                                      <div style="width: auto; height: 100%; margin-left: 1px; background-color: rgb(245, 245, 245);"></div>
+                                                    </div>
+                                                    <div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a href="https://www.google.com/intl/en-US_US/help/terms_maps.html" target="_blank" style="text-decoration: none; cursor: pointer; color: rgb(68, 68, 68);">Terms of Use</a></div>
+                                                  </div>
+                                                  <div style="z-index: 0; position: absolute; top: 0px; left: 0px;">
+                                                    <div id="gmapcJXxbH-zoom-in" class="gmap-buttons gmap-zoom-min btn style-accent-bg"><i class="fa fa-plus"></i></div>
+                                                    <div id="gmapcJXxbH-zoom-out" class="gmap-buttons gmap-zoom-out btn style-accent-bg"><i class="fa fa-minus"></i></div>
+                                                  </div>
+                                                  <div draggable="false" class="gm-style-cc" style="-webkit-user-select: none; height: 14px; line-height: 14px; position: absolute; right: 0px; bottom: 0px;">
+                                                    <div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;">
+                                                      <div style="width: 1px;"></div>
+                                                      <div style="width: auto; height: 100%; margin-left: 1px; background-color: rgb(245, 245, 245);"></div>
+                                                    </div>
+                                                    <div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a target="_new" title="Report errors in the road map or imagery to Google" href="https://www.google.com/maps/@51.50735,-0.12776,13z/data=!10m1!1e1!12b1?source=apiv3&amp;rapsrc=apiv3" style="font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); text-decoration: none; position: relative;">Report a map error</a></div>
+                                                  </div>
+                                                  <div class="gmnoprint" draggable="false" controlwidth="0" controlheight="0" style="margin: 10px; -webkit-user-select: none; position: absolute; display: none; bottom: 14px; right: 0px;">
+                                                    <div class="gmnoprint" controlwidth="28" controlheight="0" style="display: none; position: absolute;">
+                                                      <div title="Rotate map 90 degrees" style="width: 28px; height: 28px; overflow: hidden; position: absolute; border-radius: 2px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; cursor: pointer; display: none; background-color: rgb(255, 255, 255);"><img src="http://maps.gstatic.com/mapfiles/api-3/images/tmapctrl4.png" draggable="false" style="position: absolute; left: -141px; top: 6px; width: 170px; height: 54px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div>
+                                                      <div class="gm-tilt" style="width: 28px; height: 28px; overflow: hidden; position: absolute; border-radius: 2px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; top: 0px; cursor: pointer; background-color: rgb(255, 255, 255);"><img src="http://maps.gstatic.com/mapfiles/api-3/images/tmapctrl4.png" draggable="false" style="position: absolute; left: -141px; top: -13px; width: 170px; height: 54px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div>
+                                                    </div>
+                                                  </div>
+                                                  <div style="margin-left: 5px; margin-right: 5px; z-index: 1000000; position: absolute; left: 0px; bottom: 0px;">
+                                                    <a target="_blank" href="https://maps.google.com/maps?ll=51.50735,-0.12776&amp;z=13&amp;t=m&amp;hl=en-US&amp;gl=US&amp;mapclient=apiv3" title="Click to see this area on Google Maps" style="position: static; overflow: visible; float: none; display: inline;">
+                                                      <div style="width: 66px; height: 26px; cursor: pointer;"><img src="http://maps.gstatic.com/mapfiles/api-3/images/google4.png" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 66px; height: 26px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div>
+                                                    </a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <address class="style-accent-bg">19 Bedford Place, London WC1B 5JA, U.K.</address>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <script id="script-442464" type="text/javascript">UNCODE.initRow(document.getElementById("script-442464"));</script>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Google Map End -->
+                          <div data-parent="true" class="limit-width row-container" style="max-width: 800px; margin: auto;">
+                            <div class="row row-parent style-light double-top-padding double-bottom-padding">
+                              <div class="pos-top pos-center align_right column_parent single-internal-gutter">
+                                <div class="uncol style-light">
+                                  <div class="uncoltable">
+                                    <div class="uncell no-block-padding">
+                                      <div class="uncont">
+                                        <div class="icon-box-content">
+                                          <div class="icon-box-heading icon-box-fa-2x" style="display: inline;">
+                                            <h4 style="display: inline; padding-right: 12px">Hotel: Rush-inn</h4>
+                                            <div class="icon-box-icon fa-container" style="display: inline;">
+                                              <span class="text-color-160908-color btn-disable-hover"><i class="fa fa-star fa-lg"></i></span>
+                                              <span class="text-color-160908-color btn-disable-hover"><i class="fa fa-star fa-lg"></i></span>
+                                              <span class="text-color-160908-color btn-disable-hover"><i class="fa fa-star fa-lg"></i></span>
+                                              <span class="text-color-160908-color btn-disable-hover"><i class="fa fa-star-o fa-lg"></i></span>
+                                              <span class="text-color-160908-color btn-disable-hover"><i class="fa fa-star-o fa-lg"></i></span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <p>Rush-inn is known for its excellent location and cost effectiveness. All types of public transport are available the moment we step out of the hotel. It is approximately 100 m away from Al Fahidi metro station. This was the best for me since I had planned most of my travel through metro. You will find all kinds of food courts, restaurants and grocery stores within a 5 minute walking radius. Rush-inn is cheap! It costed my around <strong>AED 407/night</strong> for a room accommodating 4 people. Rooms are neat and clean with hot water running all day. The staff and service is good.</p>
+                              <blockquote>
+                                <p>Tip: Prefer a room above the 5th floor to filter out noise since there are 2 disco's at the ground floor.</p>
+                              </blockquote>
+                              <blockquote>
+                                <p>Tip: Don't miss out on the delicious burger's available about 100m away towards the left-hand side of the hotel.</p>
+                              </blockquote>
+                              <div class="pos-top pos-center align_right column_parent single-internal-gutter">
+                                <div class="uncol style-light">
+                                  <div class="uncoltable">
+                                    <div class="uncell no-block-padding">
+                                      <div class="uncont">
+                                        <div class="icon-box-content">
+                                          <div class="icon-box-heading icon-box-fa-2x" style="display: inline;">
+                                            <h4 style="display: inline; padding-right: 12px">Public Transport</h4>
+                                            <div class="icon-box-icon fa-container" style="display: inline;">
+                                              <span class="text-color-160908-color btn-disable-hover"><i class="fa fa-star fa-lg"></i></span>
+                                              <span class="text-color-160908-color btn-disable-hover"><i class="fa fa-star fa-lg"></i></span>
+                                              <span class="text-color-160908-color btn-disable-hover"><i class="fa fa-star fa-lg"></i></span>
+                                              <span class="text-color-160908-color btn-disable-hover"><i class="fa fa-star fa-lg"></i></span>
+                                              <span class="text-color-160908-color btn-disable-hover"><i class="fa fa-star-half-empty fa-lg"></i></span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <p> Dubai's public transport system is probably one of the best in the world that covers almost entire Dubai. It is the only city in the world to have Metro, Monorail and Tram. After reaching the hotel I rushed to the metro station to collect information on their rules and functioning. Unfortunately, I did not find any person to clarify my doubts in person, however, there was a huge touch-board installed at the station. It had a complete database of all public transport along with maps and locations. This was really helpful in planning my travel ahead.</p>
+                              <p> Dubai's public transport follows <strong>zone-wise costing</strong>. If you travel within the same zone (source and destination are in the same zone), it will cost you <strong>AED 3</strong>, if the travel includes two zones, then it would cost you <strong>AED 5</strong> and similarly it would cost you <strong>AED 7.5</strong> for travel including 3 or more zones. Each travel can include multiple bus changes or stops, but the number of zones your travel determines the cost.</p>
+                              <p> For using Dubai's public transport (bus, metro and tram), you would require a NOL card. Buy a Silver NOL card when you travel for the first time in metro and refill it with AED 50 (my suggestion). More details on Dubai Metro is available <a href="http://www.dubai-online.com/transport/metro/tickets-fares" target="_blank">here</a>. Similarly you can visit <a href="https://2gis.ae/dubai/rubrics?queryState=zoom%2F11%2FrouteTab" target="_blank">https://2gis.ae</a> to plan your travel by bus.</p>
+                              <p></p>
+                              <div class="pos-top pos-center align_right column_parent single-internal-gutter">
+                                <div class="uncol style-light">
+                                  <div class="uncoltable">
+                                    <div class="uncell no-block-padding">
+                                      <div class="uncont">
+                                        <div class="icon-box-content">
+                                          <div class="icon-box-heading icon-box-fa-2x" style="display: inline;">
+                                            <div class="icon-box-icon fa-container" style="display: inline;">
+                                              <span class="text-accent-color btn-disable-hover"><i class="fa fa-phone fa-lg"></i></span>
+                                            </div>
+                                            <p style="display: inline;"><strong>You can call Dubai RTA for any information on public transport: </strong></p>
+                                            <p style="display: inline;"><strong>800 9090</strong></p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <blockquote>
+                                <p>Tip: Ensure that you have atlease AED 7.5 in the NOL card before starting each journey else you would not be allowed to travel.</p>
+                              </blockquote>
+                              <blockquote>
+                                <p>Note: On Friday's Dubai metro is not functional in the first half of the day. Metro is operational after 1 PM.</p>
+                              </blockquote>
+                              <div class="pos-top pos-center align_right column_parent single-internal-gutter">
+                                <div class="uncol style-light">
+                                  <div class="uncoltable">
+                                    <div class="uncell no-block-padding">
+                                      <div class="uncont">
+                                        <div class="icon-box-content">
+                                          <div class="icon-box-heading icon-box-fa-2x" style="display: inline;">
+                                            <h4 style="display: inline; padding-right: 12px">Desert Safari</h4>
+                                            <div class="icon-box-icon fa-container" style="display: inline;">
+                                              <span class="text-color-160908-color btn-disable-hover"><i class="fa fa-star fa-lg"></i></span>
+                                              <span class="text-color-160908-color btn-disable-hover"><i class="fa fa-star fa-lg"></i></span>
+                                              <span class="text-color-160908-color btn-disable-hover"><i class="fa fa-star fa-lg"></i></span>
+                                              <span class="text-color-160908-color btn-disable-hover"><i class="fa fa-star fa-lg"></i></span>
+                                              <span class="text-color-160908-color btn-disable-hover"><i class="fa fa-star-o fa-lg"></i></span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <p>It is one of the best activities in Dubai! There are pick-up points from anywhere in Dubai city. The pick-up is around 3.30 PM and you will be back home by 10 PM. On the way to the desert, there will be one stop for <strong>Quad biking</strong>, after which there is <strong>30 minutes of Dune Bashing</strong> that will completely shake you off. You can relax after reaching the desert location and enjoy the sunset. The mesmerizing cultural dance, fire show and belly dancing starts soon after the sunset. I spent great time with family and it's a perfect way to end a day full of activities.</p>
+                              <p>Desert Safari costed me <strong>AED 120/person</strong>. You can contact these guys to book your safari:</p>
+                              <div class="pos-top pos-center align_right column_parent single-internal-gutter">
+                                <div class="uncol style-light">
+                                  <div class="uncoltable">
+                                    <div class="uncell no-block-padding">
+                                      <div class="uncont">
+                                        <div class="icon-box-content">
+                                          <div class="icon-box-heading icon-box-fa-2x">
+                                            <div class="icon-box-icon fa-container" style="display: inline;">
+                                              <span class="text-accent-color btn-disable-hover"><i class="fa fa-phone fa-lg"></i></span>
+                                            </div>
+                                            <p style="display: inline;"><strong>John: </strong></p>
+                                            <p style="display: inline;"><strong>+97-1559573868</strong></p>
+                                          </div>
+                                          <div class="icon-box-heading icon-box-fa-2x" style="display: inline;">
+                                            <div class="icon-box-icon fa-container" style="display: inline;">
+                                              <span class="text-accent-color btn-disable-hover"><i class="fa fa-phone fa-lg"></i></span>
+                                            </div>
+                                            <p style="display: inline;"><strong>Ali: </strong></p>
+                                            <p style="display: inline;"><strong>+97-1553053369</strong></p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <blockquote>
+                                <p>Tip: Do not missout on buying some Sand Art items.</p>
+                              </blockquote>
+                              <div class="pos-top pos-center align_right column_parent single-internal-gutter">
+                                <div class="uncol style-light">
+                                  <div class="uncoltable">
+                                    <div class="uncell no-block-padding">
+                                      <div class="uncont">
+                                        <div class="icon-box-content">
+                                          <div class="icon-box-heading icon-box-fa-2x" style="display: inline;">
+                                            <h4 style="display: inline; padding-right: 12px">Dolphin Show</h4>
+                                            <div class="icon-box-icon fa-container" style="display: inline;">
+                                              <span class="text-color-160908-color btn-disable-hover"><i class="fa fa-star fa-lg"></i></span>
+                                              <span class="text-color-160908-color btn-disable-hover"><i class="fa fa-star fa-lg"></i></span>
+                                              <span class="text-color-160908-color btn-disable-hover"><i class="fa fa-star fa-lg"></i></span>
+                                              <span class="text-color-160908-color btn-disable-hover"><i class="fa fa-star fa-lg"></i></span>
+                                              <span class="text-color-160908-color btn-disable-hover"><i class="fa fa-star-half-empty fa-lg"></i></span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <p> Dolphin & Seal show at the Dubai Creek Park was something I was very excited about. It was the first time I was seeing dolphins live in front of me. It was a 45 minute show and was worth each penny. I thoroughly enjoyed the show and was amazed how smart the dolphins were. You can either <a href="http://tickets.dubaidolphinarium.ae" target="_blank">book tickets online</a> or buy from the counter there itself.</p>
+                              <blockquote>
+                                <p>Tip: The bird show at Creek Park has recently been introduced. Do you can try it out.</p>
+                              </blockquote>
+                              <div class="pos-top pos-center align_right column_parent single-internal-gutter">
+                                <div class="uncol style-light">
+                                  <div class="uncoltable">
+                                    <div class="uncell no-block-padding">
+                                      <div class="uncont">
+                                        <div class="icon-box-content">
+                                          <div class="icon-box-heading icon-box-fa-2x" style="display: inline;">
+                                            <h4 style="display: inline; padding-right: 12px">Dubai mall</h4>
+                                            <div class="icon-box-icon fa-container" style="display: inline;">
+                                              <span class="text-color-160908-color btn-disable-hover"><i class="fa fa-star fa-lg"></i></span>
+                                              <span class="text-color-160908-color btn-disable-hover"><i class="fa fa-star fa-lg"></i></span>
+                                              <span class="text-color-160908-color btn-disable-hover"><i class="fa fa-star fa-lg"></i></span>
+                                              <span class="text-color-160908-color btn-disable-hover"><i class="fa fa-star fa-lg"></i></span>
+                                              <span class="text-color-160908-color btn-disable-hover"><i class="fa fa-star-o fa-lg"></i></span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <p> It is undoubtedly world's largest mall and the most beautiful mall I have ever visited. It's so huge that it is impossible to see it entirely in a single day. There are a few attractions inside the mall that really caught my attention. I have listed down a few of them:</p>
+                              <p>   
+                                <div class="uncode-wrapper uncode-list">
+                                  <ul class="text-large icons">
+                                    <li><i class="fa fa-arrow-right-thick"></i>Dubai Aquarium- It is the place where the <strong>"King Croc"</strong> lives. Go for it!</li>
+                                    <li><i class="fa fa-arrow-right-thick"></i>The Waterfall- A 100 foot waterfall built inside the mall.</li>
+                                    <li><i class="fa fa-arrow-right-thick"></i>Dubai Fountain- Worlds largest dancing fountains that jets up water upto 450 feet.</li>
+                                  </ul>
+                                </div>    
+                              </p>
+                              <div class="pos-top pos-center align_right column_parent single-internal-gutter">
+                                <div class="uncol style-light">
+                                  <div class="uncoltable">
+                                    <div class="uncell no-block-padding">
+                                      <div class="uncont">
+                                        <div class="icon-box-content">
+                                          <div class="icon-box-heading icon-box-fa-2x" style="display: inline;">
+                                            <h4 style="display: inline; padding-right: 12px">Burj Khalifa</h4>
+                                            <div class="icon-box-icon fa-container" style="display: inline;">
+                                              <span class="text-color-160908-color btn-disable-hover"><i class="fa fa-star fa-lg"></i></span>
+                                              <span class="text-color-160908-color btn-disable-hover"><i class="fa fa-star fa-lg"></i></span>
+                                              <span class="text-color-160908-color btn-disable-hover"><i class="fa fa-star fa-lg"></i></span>
+                                              <span class="text-color-160908-color btn-disable-hover"><i class="fa fa-star fa-lg"></i></span>
+                                              <span class="text-color-160908-color btn-disable-hover"><i class="fa fa-star-o fa-lg"></i></span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <p> It is the world's tallest building! That's the only reason I visited Burj Khalifa. The view from the deck on the <strong>124<sup>th</sup> floor</strong> comprises whole of Dubai. Also, we could see a plane flying below us! This just took my experience to a whole new level. I would suggest you pre-book your tickets online since it is impossible to get tickets immediately at the counter. You can book your tickets here- <a href="https://tickets.atthetop.ae/atthetop" target="_blank">At The Top.</a></p>
+                              <blockquote>
+                                <p>Tip: The best time to visit Burj Khalifa is around 5.30-6 PM. You get to see Dubai in both, daylight and night light.</p>
+                              </blockquote>
+                              <div class="pos-top pos-center align_right column_parent single-internal-gutter">
+                                <div class="uncol style-light">
+                                  <div class="uncoltable">
+                                    <div class="uncell no-block-padding">
+                                      <div class="uncont">
+                                        <div class="icon-box-content">
+                                          <div class="icon-box-heading icon-box-fa-2x" style="display: inline;">
+                                            <h4 style="display: inline; padding-right: 12px">Ferrari World</h4>
+                                            <div class="icon-box-icon fa-container" style="display: inline;">
+                                              <span class="text-color-160908-color btn-disable-hover"><i class="fa fa-star fa-lg"></i></span>
+                                              <span class="text-color-160908-color btn-disable-hover"><i class="fa fa-star fa-lg"></i></span>
+                                              <span class="text-color-160908-color btn-disable-hover"><i class="fa fa-star fa-lg"></i></span>
+                                              <span class="text-color-160908-color btn-disable-hover"><i class="fa fa-star fa-lg"></i></span>
+                                              <span class="text-color-160908-color btn-disable-hover"><i class="fa fa-star-o fa-lg"></i></span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <p> I love thrill and action, and Ferrari World gave me just that. The ride I enjoyed the most is the <strong>Fastest Roller Coaster</strong> in the world. It is a 60 second ride in which the speed goes from <strong>0 to 240 km/h in the initial 5 seconds</strong>. It was a great fun watching others too! We completed all rides with great enthusiasm and had a lot of fun. Ferrari world was action-packed!</p>
+                              <blockquote>
+                                <p>Tip: The first thing you need to do after entering Ferrari World is to book your timing for go-carting.</p>
+                              </blockquote>
+                              <div class="pos-top pos-center align_right column_parent single-internal-gutter">
+                                <div class="uncol style-light">
+                                  <div class="uncoltable">
+                                    <div class="uncell no-block-padding">
+                                      <div class="uncont">
+                                        <div class="icon-box-content">
+                                          <div class="icon-box-heading icon-box-fa-2x" style="display: inline;">
+                                            <h4 style="display: inline; padding-right: 12px">Abu Dhabi Mosque</h4>
+                                            <div class="icon-box-icon fa-container" style="display: inline;">
+                                              <span class="text-color-160908-color btn-disable-hover"><i class="fa fa-star fa-lg"></i></span>
+                                              <span class="text-color-160908-color btn-disable-hover"><i class="fa fa-star fa-lg"></i></span>
+                                              <span class="text-color-160908-color btn-disable-hover"><i class="fa fa-star fa-lg"></i></span>
+                                              <span class="text-color-160908-color btn-disable-hover"><i class="fa fa-star fa-lg"></i></span>
+                                              <span class="text-color-160908-color btn-disable-hover"><i class="fa fa-star-half-empty fa-lg"></i></span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <p>Sheikh Zayed Grand Mosquethe is the third largest mosque in the world, after the ones in Mecca and Madina in Saudi Arabia. Every aspect of the mosque including ambience, design, people and chandeliers are unique in itself. The most striking feature of the mosque is the Qibla wall on which 99 names of God (Allah) are crafted. It's worth a visit!</p>
+                              <blockquote>
+                                <p>Tip: Do not miss visiting the washroom. Its a different world in itself.</p>
+                              </blockquote>
+                              <div class="pos-top pos-center align_right column_parent single-internal-gutter">
+                                <div class="uncol style-light">
+                                  <div class="uncoltable">
+                                    <div class="uncell no-block-padding">
+                                      <div class="uncont">
+                                        <div class="icon-box-content">
+                                          <div class="icon-box-heading icon-box-fa-2x" style="display: inline;">
+                                            <h4 style="display: inline; padding-right: 12px">Gold and Spice Souk</h4>
+                                            <div class="icon-box-icon fa-container" style="display: inline;">
+                                              <span class="text-color-160908-color btn-disable-hover"><i class="fa fa-star fa-lg"></i></span>
+                                              <span class="text-color-160908-color btn-disable-hover"><i class="fa fa-star fa-lg"></i></span>
+                                              <span class="text-color-160908-color btn-disable-hover"><i class="fa fa-star fa-lg"></i></span>
+                                              <span class="text-color-160908-color btn-disable-hover"><i class="fa fa-star-o fa-lg"></i></span>
+                                              <span class="text-color-160908-color btn-disable-hover"><i class="fa fa-star-o fa-lg"></i></span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <p>This market is a very amusing place to visit. The moment you step into the market, you will aw struck by the amount of gold put in display. Since the prices of jewelry were same as that in India, we did not buy any gold items. Even the spice market is pretty decent.</p>
+                              <blockquote>
+                                <p>Tip: Please do have Shawarma near Gold souk. It's very delicious.</p>
+                              </blockquote>
+                              <div class="pos-top pos-center align_right column_parent single-internal-gutter">
+                                <div class="uncol style-light">
+                                  <div class="uncoltable">
+                                    <div class="uncell no-block-padding">
+                                      <div class="uncont">
+                                        <div class="icon-box-content">
+                                          <div class="icon-box-heading icon-box-fa-2x" style="display: inline;">
+                                            <h4 style="display: inline; padding-right: 12px">Miracle Garden</h4>
+                                            <div class="icon-box-icon fa-container" style="display: inline;">
+                                              <span class="text-color-160908-color btn-disable-hover"><i class="fa fa-star fa-lg"></i></span>
+                                              <span class="text-color-160908-color btn-disable-hover"><i class="fa fa-star fa-lg"></i></span>
+                                              <span class="text-color-160908-color btn-disable-hover"><i class="fa fa-star fa-lg"></i></span>
+                                              <span class="text-color-160908-color btn-disable-hover"><i class="fa fa-star fa-lg"></i></span>
+                                              <span class="text-color-160908-color btn-disable-hover"><i class="fa fa-star fa-lg"></i></span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <p>This miraculous garden is the best and the most beautiful place in Dubai! In fact I would say in the entire world! I am simply in love with this place. It has creatively built structures using small flower pots that are tied together so neatly that it is difficult to make out its internal structure. Roaming around the entire garden takes about 2 hours time.</p>
+                              <blockquote>
+                                <p>Tip: The best way to get there is to get a taxi from Emirates mall. It costs around AED 50 to reach there.</p>
+                              </blockquote>
+                              <div class="pos-top pos-center align_right column_parent single-internal-gutter">
+                                <div class="uncol style-light">
+                                  <div class="uncoltable">
+                                    <div class="uncell no-block-padding">
+                                      <div class="uncont">
+                                        <div class="icon-box-content">
+                                          <div class="icon-box-heading icon-box-fa-2x" style="display: inline;">
+                                            <h4 style="display: inline; padding-right: 12px">Aquaventure</h4>
+                                            <div class="icon-box-icon fa-container" style="display: inline;">
+                                              <span class="text-color-160908-color btn-disable-hover"><i class="fa fa-star fa-lg"></i></span>
+                                              <span class="text-color-160908-color btn-disable-hover"><i class="fa fa-star fa-lg"></i></span>
+                                              <span class="text-color-160908-color btn-disable-hover"><i class="fa fa-star fa-lg"></i></span>
+                                              <span class="text-color-160908-color btn-disable-hover"><i class="fa fa-star-half-empty fa-lg"></i></span>
+                                              <span class="text-color-160908-color btn-disable-hover"><i class="fa fa-star-o fa-lg"></i></span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <p>I have visited a lot of water parks and Aquaventure is definitely one fo the better ones. However, the number of rides are very limited and it can easily get very crowded leading to long waiting times. Nevertheless, it is a great place to chill, enjoy and get a tan! Also the crowd there is amazing.</p>
+                              <blockquote>
+                                <p>Tip: Travel there by metro-tram-mono rail. Metro tram are interconnected and the rates are applicable as per the zones using NOL card. Mono rail is private by Atlantis and costs 25 AED for round trip.</p>
+                              </blockquote>
+
+                              <h4>My Pick</h4>
+                              <blockquote><p>My total cost including living, food and travel came to around AED 12,250.</p></blockquote>
+                              <blockquote><p>Dubai is an Awesome city and we had a very smooth and delightful journey. Trip to Dubai is comparatively easy to plan due to a lot of resources available online.</p></blockquote>
+
+                            </div>
+                          </div>
+                        <!-- Post Content -->
+                      </div>
+                      <!-- Post Body -->
+                    </div>
+                    <!-- Post Wrapper -->
+                    <div class="post-footer post-footer-light row-container">
+                      <div class="row-container">
+                        <div class="row row-parent style-light no-top-padding no-bottom-padding" style="max-width: 800px; margin: auto;">
+                          <div class="post-share">
+                            <div class="detail-container margin-auto">
+                              <div class="share-button share-buttons share-inline share-bigger"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                </div>
+                <div class="row-container row-navigation row-navigation-light">
+                <div class="row row-parent style-light limit-width">
+                <nav class="post-navigation" role="navigation">
+                <ul class="navigation">
+                <li class="page-prev"><span class="btn-container"><span class="btn btn-link btn-icon-left btn-disable-hover"><i class="fa fa-angle-left"></i>Prev</span></span></li>
+                <li class="page-next"><span class="btn-container"><a class="btn btn-link text-default-color btn-icon-right" href="cssvsjs.html" rel="next"><span>Next</span><i class="fa fa-angle-right"></i></a></span></li>
+                </ul>
+                <!-- .navigation -->
+                </nav>
+                <!-- .post-navigation -->
+                </div>
+                </div>
+              </div>
+              </article>
             </div>
-            <!-- main wrapper -->
-         </div>
-         <!-- box container -->
+            <!-- sections container -->
+          </div>
+          <!-- page wrapper -->
+          <footer id="colophon" class="site-footer">
+            <div class="row-container style-dark-bg footer-last">
+              <div class="row row-parent style-dark limit-width no-top-padding no-h-padding no-bottom-padding">
+                <div class="site-info uncell col-lg-6 pos-middle text-left">&copy; 2016 Nishant Panchal - All rights reserved</div>
+                <!-- site info -->
+                <div class="uncell col-lg-6 pos-middle text-right">
+                  <div class="social-icon icon-box icon-box-top icon-inline"><a href="http://facebook.com/niscool" target="_blank"><i class="fa fa-social-facebook"></i></a></div>
+                  <div class="social-icon icon-box icon-box-top icon-inline"><a href="http://twitter.com/PanchalNish21" target="_blank"><i class="fa fa-social-twitter"></i></a></div>
+                  <div class="social-icon icon-box icon-box-top icon-inline"><a href="http://www.github.com/NishantPanchal92" target="_blank"><i class="fa fa-github"></i></a></div>
+                  <div class="social-icon icon-box icon-box-top icon-inline"><a href="https://behance.net/nishcool" target="_blank"><i class="fa fa-behance-square"></i></a></div>
+                  <div class="social-icon icon-box icon-box-top icon-inline"><a href="https://www.linkedin.com/in/nishant-panchal-2038a056" target="_blank"><i class="fa fa-social-linkedin"></i></a></div>
+                </div>
+              </div>
+            </div>
+          </footer>
+        </div>
+        <!-- main container -->
       </div>
-      <!-- box wrapper -->
-      <div class="style-light footer-scroll-top"><a href="#" class="scroll-top"><i class="fa fa-angle-up fa-stack fa-rounded btn-default btn-hover-nobg"></i></a></div>
-
-      <!-- Affects the pie chart -->
-			<div class="theme_panel uncont style-light">
-			</div>
-
-			<!-- Required for scroll-downa arrow -->
-			<script type="text/javascript" src='../js/panel.js'></script>
-			<script type="text/javascript" src='../js/plugins.min.js'></script>
-			<script type="text/javascript" src='../js/app.min.js'></script>
+      <!-- main wrapper -->
+    </div>
+    <!-- box container -->
+    </div>
+    <!-- box wrapper -->
+    <div class="style-light footer-scroll-top"><a href="#" class="scroll-top"><i class="fa fa-angle-up fa-stack fa-rounded btn-default btn-hover-nobg"></i></a></div>
+    <!-- Affects the pie chart -->
+    <div class="theme_panel uncont style-light">
+    </div>
+    <!-- Required for scroll-downa arrow -->
+    <script type="text/javascript" src='../js/panel.js'></script>
+    <script type="text/javascript" src='../js/plugins.min.js'></script>
+    <script type="text/javascript" src='../js/app.min.js'></script>
 </html>
