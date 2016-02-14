@@ -7183,11 +7183,11 @@ div[class*=shift_y_neg] .isotope-filters ul.menu-smart > li > span {
   text-align: center;
 }
 .ilightbox-holder.black .ilightbox-alert {
-  background: url('../img/ilightbox/black-skin/alert.png') no-repeat center top;
+  background: url('../images/alert.png') no-repeat center top;
   color: #555;
 }
 .ilightbox-toolbar.black a {
-  background: url('../img/ilightbox/black-skin/buttons.png') no-repeat 7px 6px;
+  background: url('../images/buttons.png') no-repeat 7px 6px;
 }
 .ilightbox-toolbar.black a.ilightbox-close {
   position: absolute;

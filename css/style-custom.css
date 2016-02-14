@@ -437,6 +437,9 @@ hr.separator-break {
 hr.separator-break.separator-accent {
   border-color: #0cb4ce !important;
 }
+hr.separator-break.separator-red {
+  border-color: #EF3B39 !important;
+}
 /* #Paragraph-color */
 /* #Link-color */
 .style-dark .link,
@@ -2011,6 +2014,11 @@ textarea,
   color: #fff !important;
   background-color: #0cb4ce !important;
   border-color: #0cb4ce !important;
+}
+.btn-red {
+  color: #fff !important;
+  background-color: #EF3B39 !important;
+  border-color: #EF3B39 !important;
 }
 .btn-accent:not(.btn-hover-nobg):hover,
 .btn-accent.active {
