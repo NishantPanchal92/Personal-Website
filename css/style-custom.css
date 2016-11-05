@@ -1699,7 +1699,7 @@ button[type="submit"],
 .style-dark .post-info a,
 .style-dark.style-override .post-info a,
 .style-light .style-dark .post-info a {
-  color: #999;
+  color: #fff;
 }
 .style-dark .ui-link-text:hover,
 .style-dark.style-override .ui-link-text:hover,
