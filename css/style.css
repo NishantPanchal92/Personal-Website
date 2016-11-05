@@ -3230,7 +3230,7 @@ div > .icon-box:last-child {
 .icon-box-left .icon-box-content,
 .icon-box-right .icon-box-content {
   display: table-cell;
-  vertical-align: top;
+  vertical-align: middle;
 }
 .icon-box-left .icon-box-icon,
 .icon-box-right .icon-box-icon {
