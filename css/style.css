@@ -3247,7 +3247,7 @@ div > .icon-box:last-child {
 .icon-box-left .icon-box-heading > *,
 .icon-box-right .icon-box-heading > * {
   display: table-cell;
-  vertical-align: middle;
+  vertical-align: top;
   margin-top: 0px;
 }
 .icon-box-left .fa-1x,
