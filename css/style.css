@@ -4497,8 +4497,8 @@ tbody.collapse.in {
   width: 100%;
 }
 .post-wrapper .post-share {
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
+/*  border-bottom-width: 1px;
+  border-bottom-style: solid;*/
   padding-top: 30px;
   padding-bottom: 30px;
 }
