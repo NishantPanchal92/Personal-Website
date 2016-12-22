@@ -9765,7 +9765,7 @@ div[class*=shift_y_neg] .isotope-filters ul.menu-smart > li > span {
 }
 .no-touch .onepage-pagination span.cd-dot-cont:hover .cd-dot,
 .no-touch .onepage-pagination a.is-selected .cd-dot {
-  background-color: #ffffff;
+  background-color: #0cb4ce;
   -webkit-transform: scale(1.3);
   -moz-transform: scale(1.3);
   -o-transform: scale(1.3);
