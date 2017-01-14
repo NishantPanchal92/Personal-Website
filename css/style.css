@@ -3012,7 +3012,7 @@ input.wpcf7-submit {
 .btn .fa,
 .btn-link .fa {
   position: relative;
-  vertical-align: top;
+  /*vertical-align: top;*/
   line-height: inherit;
 }
 .btn.btn-border-animated,
