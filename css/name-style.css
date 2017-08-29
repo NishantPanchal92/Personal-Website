@@ -628,6 +628,7 @@ xslide
 .cd-headline.slide .cd-words-wrapper {
   overflow: hidden;
   vertical-align: top;
+  text-align: center;
 }
 .cd-headline.slide b {
   opacity: 0;
@@ -1146,6 +1147,7 @@ xpush
 -------------------------------- */
 .cd-headline.push b {
   opacity: 0;
+  text-align: center;
 }
 .cd-headline.push b.is-visible {
   opacity: 1;
