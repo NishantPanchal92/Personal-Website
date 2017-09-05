@@ -1765,7 +1765,7 @@ button[type="submit"],
   color: #fff !important;
   background-color: #303133 !important;
   border-color: #303133 !important;
-  opacity: 0.7;
+  /*opacity: 0.7;*/
 }
 .style-light .btn-default:not(.btn-hover-nobg):hover,
 .style-dark .style-light.style-override .btn-default:not(.btn-hover-nobg):hover,
